@@ -1,0 +1,435 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		635DC2FC1A93C16400CCEEEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 635DC2FB1A93C16400CCEEEA /* main.m */; };
+		635DC2FF1A93C16400CCEEEA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 635DC2FE1A93C16400CCEEEA /* AppDelegate.m */; };
+		635DC3021A93C16400CCEEEA /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 635DC3011A93C16400CCEEEA /* FirstViewController.m */; };
+		635DC3051A93C16400CCEEEA /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 635DC3041A93C16400CCEEEA /* SecondViewController.m */; };
+		635DC3081A93C16400CCEEEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 635DC3061A93C16400CCEEEA /* Main.storyboard */; };
+		635DC30A1A93C16400CCEEEA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 635DC3091A93C16400CCEEEA /* Images.xcassets */; };
+		635DC30D1A93C16400CCEEEA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 635DC30B1A93C16400CCEEEA /* LaunchScreen.xib */; };
+		635DC3191A93C16400CCEEEA /* TripEaseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 635DC3181A93C16400CCEEEA /* TripEaseTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		635DC3131A93C16400CCEEEA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 635DC2EE1A93C16400CCEEEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 635DC2F51A93C16400CCEEEA;
+			remoteInfo = TripEase;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		635DC2F61A93C16400CCEEEA /* TripEase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripEase.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		635DC2FA1A93C16400CCEEEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		635DC2FB1A93C16400CCEEEA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		635DC2FD1A93C16400CCEEEA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		635DC2FE1A93C16400CCEEEA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		635DC3001A93C16400CCEEEA /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		635DC3011A93C16400CCEEEA /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		635DC3031A93C16400CCEEEA /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		635DC3041A93C16400CCEEEA /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		635DC3071A93C16400CCEEEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		635DC3091A93C16400CCEEEA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		635DC30C1A93C16400CCEEEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		635DC3121A93C16400CCEEEA /* TripEaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TripEaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		635DC3171A93C16400CCEEEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		635DC3181A93C16400CCEEEA /* TripEaseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TripEaseTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		635DC2F31A93C16400CCEEEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		635DC30F1A93C16400CCEEEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		635DC2ED1A93C16400CCEEEA = {
+			isa = PBXGroup;
+			children = (
+				635DC2F81A93C16400CCEEEA /* TripEase */,
+				635DC3151A93C16400CCEEEA /* TripEaseTests */,
+				635DC2F71A93C16400CCEEEA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		635DC2F71A93C16400CCEEEA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				635DC2F61A93C16400CCEEEA /* TripEase.app */,
+				635DC3121A93C16400CCEEEA /* TripEaseTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		635DC2F81A93C16400CCEEEA /* TripEase */ = {
+			isa = PBXGroup;
+			children = (
+				635DC2FD1A93C16400CCEEEA /* AppDelegate.h */,
+				635DC2FE1A93C16400CCEEEA /* AppDelegate.m */,
+				635DC3001A93C16400CCEEEA /* FirstViewController.h */,
+				635DC3011A93C16400CCEEEA /* FirstViewController.m */,
+				635DC3031A93C16400CCEEEA /* SecondViewController.h */,
+				635DC3041A93C16400CCEEEA /* SecondViewController.m */,
+				635DC3061A93C16400CCEEEA /* Main.storyboard */,
+				635DC3091A93C16400CCEEEA /* Images.xcassets */,
+				635DC30B1A93C16400CCEEEA /* LaunchScreen.xib */,
+				635DC2F91A93C16400CCEEEA /* Supporting Files */,
+			);
+			path = TripEase;
+			sourceTree = "<group>";
+		};
+		635DC2F91A93C16400CCEEEA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				635DC2FA1A93C16400CCEEEA /* Info.plist */,
+				635DC2FB1A93C16400CCEEEA /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		635DC3151A93C16400CCEEEA /* TripEaseTests */ = {
+			isa = PBXGroup;
+			children = (
+				635DC3181A93C16400CCEEEA /* TripEaseTests.m */,
+				635DC3161A93C16400CCEEEA /* Supporting Files */,
+			);
+			path = TripEaseTests;
+			sourceTree = "<group>";
+		};
+		635DC3161A93C16400CCEEEA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				635DC3171A93C16400CCEEEA /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		635DC2F51A93C16400CCEEEA /* TripEase */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 635DC31C1A93C16400CCEEEA /* Build configuration list for PBXNativeTarget "TripEase" */;
+			buildPhases = (
+				635DC2F21A93C16400CCEEEA /* Sources */,
+				635DC2F31A93C16400CCEEEA /* Frameworks */,
+				635DC2F41A93C16400CCEEEA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TripEase;
+			productName = TripEase;
+			productReference = 635DC2F61A93C16400CCEEEA /* TripEase.app */;
+			productType = "com.apple.product-type.application";
+		};
+		635DC3111A93C16400CCEEEA /* TripEaseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 635DC31F1A93C16400CCEEEA /* Build configuration list for PBXNativeTarget "TripEaseTests" */;
+			buildPhases = (
+				635DC30E1A93C16400CCEEEA /* Sources */,
+				635DC30F1A93C16400CCEEEA /* Frameworks */,
+				635DC3101A93C16400CCEEEA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				635DC3141A93C16400CCEEEA /* PBXTargetDependency */,
+			);
+			name = TripEaseTests;
+			productName = TripEaseTests;
+			productReference = 635DC3121A93C16400CCEEEA /* TripEaseTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		635DC2EE1A93C16400CCEEEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "KISS Apps";
+				TargetAttributes = {
+					635DC2F51A93C16400CCEEEA = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					635DC3111A93C16400CCEEEA = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 635DC2F51A93C16400CCEEEA;
+					};
+				};
+			};
+			buildConfigurationList = 635DC2F11A93C16400CCEEEA /* Build configuration list for PBXProject "TripEase" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 635DC2ED1A93C16400CCEEEA;
+			productRefGroup = 635DC2F71A93C16400CCEEEA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				635DC2F51A93C16400CCEEEA /* TripEase */,
+				635DC3111A93C16400CCEEEA /* TripEaseTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		635DC2F41A93C16400CCEEEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				635DC3081A93C16400CCEEEA /* Main.storyboard in Resources */,
+				635DC30D1A93C16400CCEEEA /* LaunchScreen.xib in Resources */,
+				635DC30A1A93C16400CCEEEA /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		635DC3101A93C16400CCEEEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		635DC2F21A93C16400CCEEEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				635DC3051A93C16400CCEEEA /* SecondViewController.m in Sources */,
+				635DC2FF1A93C16400CCEEEA /* AppDelegate.m in Sources */,
+				635DC3021A93C16400CCEEEA /* FirstViewController.m in Sources */,
+				635DC2FC1A93C16400CCEEEA /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		635DC30E1A93C16400CCEEEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				635DC3191A93C16400CCEEEA /* TripEaseTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		635DC3141A93C16400CCEEEA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 635DC2F51A93C16400CCEEEA /* TripEase */;
+			targetProxy = 635DC3131A93C16400CCEEEA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		635DC3061A93C16400CCEEEA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				635DC3071A93C16400CCEEEA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		635DC30B1A93C16400CCEEEA /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				635DC30C1A93C16400CCEEEA /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		635DC31A1A93C16400CCEEEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		635DC31B1A93C16400CCEEEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		635DC31D1A93C16400CCEEEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TripEase/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		635DC31E1A93C16400CCEEEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TripEase/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		635DC3201A93C16400CCEEEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TripEaseTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TripEase.app/TripEase";
+			};
+			name = Debug;
+		};
+		635DC3211A93C16400CCEEEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TripEaseTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TripEase.app/TripEase";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		635DC2F11A93C16400CCEEEA /* Build configuration list for PBXProject "TripEase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				635DC31A1A93C16400CCEEEA /* Debug */,
+				635DC31B1A93C16400CCEEEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		635DC31C1A93C16400CCEEEA /* Build configuration list for PBXNativeTarget "TripEase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				635DC31D1A93C16400CCEEEA /* Debug */,
+				635DC31E1A93C16400CCEEEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		635DC31F1A93C16400CCEEEA /* Build configuration list for PBXNativeTarget "TripEaseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				635DC3201A93C16400CCEEEA /* Debug */,
+				635DC3211A93C16400CCEEEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 635DC2EE1A93C16400CCEEEA /* Project object */;
+}
