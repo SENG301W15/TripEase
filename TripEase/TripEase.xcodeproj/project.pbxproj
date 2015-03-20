@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		633F04201AB9CD8400F0335C /* CostView.m in Sources */ = {isa = PBXBuildFile; fileRef = 633F041E1AB9CD8400F0335C /* CostView.m */; };
+		633F04211AB9CD8400F0335C /* CostView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 633F041F1AB9CD8400F0335C /* CostView.xib */; };
 		635DC2FC1A93C16400CCEEEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 635DC2FB1A93C16400CCEEEA /* main.m */; };
 		635DC2FF1A93C16400CCEEEA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 635DC2FE1A93C16400CCEEEA /* AppDelegate.m */; };
 		635DC3021A93C16400CCEEEA /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 635DC3011A93C16400CCEEEA /* FirstViewController.m */; };
@@ -28,6 +30,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		633F041D1AB9CD8400F0335C /* CostView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CostView.h; sourceTree = "<group>"; };
+		633F041E1AB9CD8400F0335C /* CostView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CostView.m; sourceTree = "<group>"; };
+		633F041F1AB9CD8400F0335C /* CostView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CostView.xib; sourceTree = "<group>"; };
 		635DC2F61A93C16400CCEEEA /* TripEase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripEase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		635DC2FA1A93C16400CCEEEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		635DC2FB1A93C16400CCEEEA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -91,6 +96,9 @@
 				635DC3031A93C16400CCEEEA /* SecondViewController.h */,
 				635DC3041A93C16400CCEEEA /* SecondViewController.m */,
 				635DC3061A93C16400CCEEEA /* Main.storyboard */,
+				633F041D1AB9CD8400F0335C /* CostView.h */,
+				633F041E1AB9CD8400F0335C /* CostView.m */,
+				633F041F1AB9CD8400F0335C /* CostView.xib */,
 				635DC3091A93C16400CCEEEA /* Images.xcassets */,
 				635DC30B1A93C16400CCEEEA /* LaunchScreen.xib */,
 				635DC2F91A93C16400CCEEEA /* Supporting Files */,
@@ -205,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				635DC3081A93C16400CCEEEA /* Main.storyboard in Resources */,
+				633F04211AB9CD8400F0335C /* CostView.xib in Resources */,
 				635DC30D1A93C16400CCEEEA /* LaunchScreen.xib in Resources */,
 				635DC30A1A93C16400CCEEEA /* Images.xcassets in Resources */,
 			);
@@ -227,6 +236,7 @@
 				635DC3051A93C16400CCEEEA /* SecondViewController.m in Sources */,
 				635DC2FF1A93C16400CCEEEA /* AppDelegate.m in Sources */,
 				635DC3021A93C16400CCEEEA /* FirstViewController.m in Sources */,
+				633F04201AB9CD8400F0335C /* CostView.m in Sources */,
 				635DC2FC1A93C16400CCEEEA /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,6 +361,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = TripEase/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -361,6 +372,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = TripEase/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -420,6 +432,7 @@
 				635DC31E1A93C16400CCEEEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		635DC31F1A93C16400CCEEEA /* Build configuration list for PBXNativeTarget "TripEaseTests" */ = {
 			isa = XCConfigurationList;
@@ -428,6 +441,7 @@
 				635DC3211A93C16400CCEEEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
