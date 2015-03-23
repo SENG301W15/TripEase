@@ -10,6 +10,7 @@
 #import "FirstViewController.h"
 
 @interface FirstViewController ()
+@property (weak, nonatomic) IBOutlet UITextView *DetailTextField;
 
 @end
 
@@ -18,6 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.DetailTextField.layer.borderWidth=5.0f;
+    self.DetailTextField.layer.borderColor=[[UIColor grayColor]CGColor];
 }
 
 - (void)didReceiveMemoryWarning {
