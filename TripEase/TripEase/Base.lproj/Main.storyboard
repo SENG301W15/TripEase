@@ -22,7 +22,7 @@
             </objects>
             <point key="canvasLocation" x="-834" y="-1388"/>
         </scene>
-        <!--Edit Trip Info-->
+        <!--Details-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="FirstViewController" sceneMemberID="viewController">
@@ -131,7 +131,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Details" image="sample-1012-sticky-note" id="vCP-Fu-Xzj"/>
-                    <navigationItem key="navigationItem" title="Edit Trip Info" id="CA1-uX-fpV"/>
+                    <navigationItem key="navigationItem" title="Details" prompt="Edit Trip Info" id="CA1-uX-fpV"/>
                     <connections>
                         <outlet property="DetailTextField" destination="mFy-Rq-UAV" id="Yvy-HE-eH4"/>
                     </connections>
@@ -140,7 +140,7 @@
             </objects>
             <point key="canvasLocation" x="-1517" y="-632"/>
         </scene>
-        <!--Edit Trip Info-->
+        <!--Costs-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="SecondViewController" sceneMemberID="viewController">
@@ -214,16 +214,16 @@
                             <constraint firstItem="UTd-IH-Cvx" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="10" id="uf1-5l-api"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Edit Trip Info" id="xmT-HV-ldU"/>
+                    <navigationItem key="navigationItem" title="Costs" prompt="Edit Trip Info" id="xmT-HV-ldU"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1002" y="614"/>
         </scene>
-        <!--Edit Trip Info-->
+        <!--Let's Add An Item!-->
         <scene sceneID="8XW-Jq-6mO">
             <objects>
-                <viewController id="CeE-6P-DRX" sceneMemberID="viewController">
+                <viewController id="CeE-6P-DRX" customClass="AddPackingListItemViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="R1O-Bv-7E0"/>
                         <viewControllerLayoutGuide type="bottom" id="PiO-U5-FHl"/>
@@ -233,11 +233,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Edit Trip Info" id="k4k-JC-6Fy"/>
+                    <navigationItem key="navigationItem" title="Let's Add An Item!" id="k4k-JC-6Fy">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="dw8-Mc-gnj">
+                            <connections>
+                                <segue destination="aGm-Lp-BfW" kind="unwind" unwindAction="unwindToList:" id="NM2-dI-Vi0"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="lDp-Li-X1m">
+                            <connections>
+                                <segue destination="aGm-Lp-BfW" kind="unwind" unwindAction="unwindToList:" id="rlI-O8-ZuI"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dvl-LK-f6f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="aGm-Lp-BfW" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1327" y="614"/>
+            <point key="canvasLocation" x="2139" y="614"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="IY8-Bh-WLR">
@@ -461,7 +473,7 @@
             </objects>
             <point key="canvasLocation" x="1300" y="-310"/>
         </scene>
-        <!--Edit Trip Info-->
+        <!--Invite Friends-->
         <scene sceneID="dBt-N8-hwW">
             <objects>
                 <viewController id="h36-Ke-VxA" sceneMemberID="viewController">
@@ -481,7 +493,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Edit Trip Info" id="uMm-SE-Rlj"/>
+                    <navigationItem key="navigationItem" title="Invite Friends" prompt="Edit Trip Info" id="uMm-SE-Rlj"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Ye-kJ-rsr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -530,7 +542,6 @@
         <!--Packing List-->
         <scene sceneID="gfB-FQ-ndt">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zJA-Fh-d8j" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GdG-cd-oDO" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Packing List" image="sample-920-handbag" id="v1H-LL-J69"/>
                     <toolbarItems/>
@@ -543,13 +554,14 @@
                         <segue destination="6Lj-l2-Hxx" kind="relationship" relationship="rootViewController" id="cmB-cX-3ti"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zJA-Fh-d8j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-139" y="602"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Shared Packing List-->
         <scene sceneID="QSa-3c-q43">
             <objects>
-                <tableViewController id="6Lj-l2-Hxx" sceneMemberID="viewController">
+                <tableViewController id="6Lj-l2-Hxx" customClass="PackingListTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="pje-0O-fji">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -711,76 +723,6 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="gM4-eN-xbv" style="IBUITableViewCellStyleDefault" id="1nb-FS-V35">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1nb-FS-V35" id="duZ-Xt-BLz">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Placeholder Text" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gM4-eN-xbv">
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="RLk-Bt-f20" style="IBUITableViewCellStyleDefault" id="Vge-aJ-s56">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vge-aJ-s56" id="H9l-Um-qwq">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Placeholder Text" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RLk-Bt-f20">
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="6Q5-vk-sj7" style="IBUITableViewCellStyleDefault" id="o9W-d3-a7i">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="o9W-d3-a7i" id="Qlb-uy-GnQ">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Placeholder Text" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6Q5-vk-sj7">
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="fKG-gQ-s6p" style="IBUITableViewCellStyleDefault" id="DEe-g2-3rI">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DEe-g2-3rI" id="pmQ-cD-99q">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Placeholder Text" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fKG-gQ-s6p">
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="lEq-h2-L8I" style="IBUITableViewCellStyleDefault" id="xmn-zB-rUf">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xmn-zB-rUf" id="UXI-fD-52K">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Placeholder Text" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lEq-h2-L8I">
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="5ID-Te-4UA" style="IBUITableViewCellStyleDefault" id="KUi-QK-BNF">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KUi-QK-BNF" id="QlT-9g-ohV">
@@ -843,10 +785,13 @@
                             <outlet property="delegate" destination="6Lj-l2-Hxx" id="TEb-5O-uOg"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="zF7-0a-xpb"/>
-                    <connections>
-                        <segue destination="CeE-6P-DRX" kind="show" id="1WM-q7-jGL"/>
-                    </connections>
+                    <navigationItem key="navigationItem" title="Shared Packing List" prompt="Edit Trip Info" id="zF7-0a-xpb">
+                        <barButtonItem key="rightBarButtonItem" title=" + Add Item" id="3oi-Qs-GtL">
+                            <connections>
+                                <segue destination="uti-At-n2c" kind="presentation" id="qD8-fi-9eW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YbI-G5-2KK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -870,6 +815,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uq4-nT-sMq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="573" y="-310"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wXu-4B-hGQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uti-At-n2c" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LDz-O7-q8x">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="CeE-6P-DRX" kind="relationship" relationship="rootViewController" id="zbd-ZY-OIg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aCF-WU-b41" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1327" y="614"/>
         </scene>
     </scenes>
     <resources>
