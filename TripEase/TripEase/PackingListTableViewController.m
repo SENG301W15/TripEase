@@ -7,19 +7,39 @@
 //
 
 #import "PackingListTableViewController.h"
+#import "PackingListItem.h"
+#import "AddPackingListItemViewController.h"
 
 @interface PackingListTableViewController ()
+
+@property NSMutableArray *packingListItems; //Array to store shared packing list items
 
 @end
 
 @implementation PackingListTableViewController
 
+
+//Defines the behaviour when returning from the "Add Packing List Items" modal screen
 - (IBAction)unwindToList:(UIStoryboardSegue *)segue {
     
+    //Get the source view controller of the previous scene
+    AddPackingListItemViewController *source = [segue sourceViewController];
+    
+    //Recover the item that was added by the user, if any
+    PackingListItem *item = source.packingListItem;
+    
+    //If item exists (i.e. if user entered any text), add item to the table and reload the view to display this
+    if (item != nil) {
+        [self.packingListItems addObject:item];
+        [self.tableView reloadData];
+    }
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.packingListItems = [[NSMutableArray alloc] init]; //initialize packing list items array
+    
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -36,26 +56,37 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [self.packingListItems count];
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
-    // Configure the cell...
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ListPrototypeCell" forIndexPath:indexPath];
+    
+    PackingListItem *PackingListItem = [self.packingListItems objectAtIndex:indexPath.row];
+    cell.textLabel.text = PackingListItem.itemName;
+
+    //Display checkmark next to item when it is checked off
+    if (PackingListItem.completed) {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark; //Display checkmark next to completed items
+    } else {
+        cell.accessoryType = UITableViewCellAccessoryNone;      //No icon displayed next to un-completed items
+    }
+    
+    
     
     return cell;
+    
+
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -116,5 +147,17 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark - Table view delegate
+
+//ADD COMMENTS: What the fuck is actually happening here
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    PackingListItem *tappedItem = [self.packingListItems objectAtIndex:indexPath.row];
+    tappedItem.completed = !tappedItem.completed;   //Check if currently unchecked and vice versa
+    [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+    
+}
 
 @end

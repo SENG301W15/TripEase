@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PackingListItem.h"
 
 @interface AddPackingListItemViewController : UIViewController
+
+@property PackingListItem *packingListItem;
 
 @end
