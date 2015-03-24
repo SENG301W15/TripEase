@@ -19,7 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.DetailTextField.layer.borderWidth=5.0f;
+    self.DetailTextField.layer.borderWidth=1.0;
+    self.DetailTextField.layer.cornerRadius=8;
     self.DetailTextField.layer.borderColor=[[UIColor grayColor]CGColor];
 }
 
