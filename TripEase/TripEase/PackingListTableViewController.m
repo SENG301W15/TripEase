@@ -18,6 +18,17 @@
 
 @implementation PackingListTableViewController
 
+//Adds "swipe row to delete" functionality
+//When user swipes to the left on this row, the 'delete' button appears at the left of the row
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    //Remove deleted item from the array
+    [self.packingListItems removeObjectAtIndex:indexPath.row];
+    
+    //Reload table view to display updated state
+    [tableView reloadData];
+
+}
 
 //Defines the behaviour when returning from the "Add Packing List Items" modal screen
 - (IBAction)unwindToList:(UIStoryboardSegue *)segue {
@@ -86,6 +97,7 @@
     
 
 }
+
 
 
 /*

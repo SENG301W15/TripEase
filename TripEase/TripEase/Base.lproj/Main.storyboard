@@ -34,12 +34,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e.g. Green Mountain Campground" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pqm-HN-dpI">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e.g. Green Mountain Campground" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pqm-HN-dpI">
                                 <rect key="frame" x="16" y="152" width="568" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e.g. August 22, 2015" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Nl-4K-HHc">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e.g. August 22, 2015" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Nl-4K-HHc">
                                 <rect key="frame" x="16" y="211" width="568" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -68,7 +68,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e.g. August 25, 2015" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hut-QZ-sft">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e.g. August 25, 2015" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hut-QZ-sft">
                                 <rect key="frame" x="16" y="270" width="568" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -79,7 +79,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e.g. Camping Extravaganza 2015" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i2u-pt-ObZ">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e.g. Camping Extravaganza 2015" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i2u-pt-ObZ">
                                 <rect key="frame" x="16" y="93" width="568" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -176,7 +176,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e.g. $100.00" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g50-S9-a9E">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e.g. $100.00" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g50-S9-a9E">
                                 <rect key="frame" x="16" y="93" width="568" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -613,7 +613,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Shared Packing List" prompt="Edit Trip Info" id="zF7-0a-xpb">
-                        <barButtonItem key="rightBarButtonItem" title=" + Add Item" id="3oi-Qs-GtL">
+                        <barButtonItem key="rightBarButtonItem" title=" Add" id="3oi-Qs-GtL">
                             <connections>
                                 <segue destination="uti-At-n2c" kind="presentation" id="qD8-fi-9eW"/>
                             </connections>
