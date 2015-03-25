@@ -240,7 +240,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Item Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bqh-zD-vXo">
                                 <rect key="frame" x="25" y="264" width="92" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -278,7 +278,6 @@
         <!--Table View Controller-->
         <scene sceneID="IY8-Bh-WLR">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ovQ-ad-z3a" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="cJA-0K-R4F" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="icA-hz-3w6">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
@@ -475,15 +474,21 @@
                             <outlet property="delegate" destination="cJA-0K-R4F" id="N4m-85-DIL"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Sot-1G-wSk"/>
+                    <navigationItem key="navigationItem" id="Sot-1G-wSk">
+                        <barButtonItem key="rightBarButtonItem" title="Invite" id="QDc-xP-JFd">
+                            <connections>
+                                <segue destination="ufA-A9-ZLm" kind="presentation" id="j0j-6i-VHO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ovQ-ad-z3a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1300" y="-310"/>
         </scene>
         <!--Send Invite-->
         <scene sceneID="dBt-N8-hwW">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7Ye-kJ-rsr" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="h36-Ke-VxA" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pmi-AJ-BMv"/>
@@ -501,7 +506,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Friend's Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tah-rb-rnZ">
                                 <rect key="frame" x="22" y="215" width="133" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e.g. (123)867-5309" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dLF-iQ-rp7">
@@ -521,7 +526,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Friend's Phone Number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EHq-Pa-3kj">
                                 <rect key="frame" x="22" y="304" width="192" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -544,6 +549,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Send By SMS" id="Av5-W2-2fT"/>
                     </navigationItem>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Ye-kJ-rsr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2941" y="-286"/>
         </scene>

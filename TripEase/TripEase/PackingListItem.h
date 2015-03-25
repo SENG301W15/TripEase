@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+//This class stores items that have been added to the shared packing list
+
 @interface PackingListItem : NSObject
 
 @property NSString *itemName;               //Item name as it will appear in the app
