@@ -10,7 +10,11 @@
 #import "EditDetailsViewController.h"
 
 @interface EditDetailsViewController ()
+
+
 @property (weak, nonatomic) IBOutlet UITextView *DetailTextField;
+
+@property (weak, nonatomic) IBOutlet UITextField *startDateTextField;
 
 @end
 
@@ -18,11 +22,37 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    //Apply border around the "Additional Details" text field
     self.DetailTextField.layer.borderWidth=1.0;
     self.DetailTextField.layer.cornerRadius=8;
     self.DetailTextField.layer.borderColor=[[UIColor grayColor]CGColor];
+    
+    //Display date picker wheel when user taps start date text box
+    UIDatePicker *startDatePicker = [[UIDatePicker alloc]init];
+    //We don't care about time so set picker mode to Date only
+    startDatePicker.datePickerMode=UIDatePickerModeDate;
+    [startDatePicker setDate:[NSDate date]];
+    [startDatePicker addTarget:self action:@selector(updateStartDateTextField:) forControlEvents:UIControlEventValueChanged];
+    [self.startDateTextField setInputView:startDatePicker];
+    
+    
 }
+
+//Update startDateTextField with value selected from DatePicker
+-(void)updateStartDateTextField:(id)sender{
+    UIDatePicker *picker=(UIDatePicker *)self.startDateTextField.inputView;
+    
+    //Format time and date string to 'Day, Month date year'
+    //Instantiate new NSDateFormatter object
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
+    //set date format parameters, format date picker
+    [dateFormatter setDateFormat:@" ' 'EEEE MMMM d yyyy'"];
+    NSString *strStartDate = [dateFormatter stringFromDate:picker.date];
+    
+    self.startDateTextField.text=[NSString stringWithFormat:@"%@",strStartDate];
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
