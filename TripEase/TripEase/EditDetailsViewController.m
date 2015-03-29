@@ -16,6 +16,8 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *startDateTextField;
 
+@property (weak, nonatomic) IBOutlet UITextField *endDateTextField;
+
 @end
 
 @implementation EditDetailsViewController
@@ -29,17 +31,25 @@
     
     //Display date picker wheel when user taps start date text box
     UIDatePicker *startDatePicker = [[UIDatePicker alloc]init];
+    UIDatePicker *endDatePicker = [[UIDatePicker alloc]init];
     //We don't care about time so set picker mode to Date only
     startDatePicker.datePickerMode=UIDatePickerModeDate;
     [startDatePicker setDate:[NSDate date]];
+    endDatePicker.datePickerMode=UIDatePickerModeDate;
+    [endDatePicker setDate:[NSDate date]];
+    
     [startDatePicker addTarget:self action:@selector(updateStartDateTextField:) forControlEvents:UIControlEventValueChanged];
+    [endDatePicker addTarget:self action:@selector(updateEndDateTextField:) forControlEvents:UIControlEventValueChanged];
+    
+    //call updateDateTextField method when either date text field is selected by user
     [self.startDateTextField setInputView:startDatePicker];
+    [self.endDateTextField setInputView:endDatePicker];
     
     
 }
 
-//Update startDateTextField with value selected from DatePicker
--(void)updateStartDateTextField:(id)sender{
+//Update date text fields with values selected from DatePicker
+-(void)updateStartDateTextField:(id)sender{ //(id)sender
     UIDatePicker *picker=(UIDatePicker *)self.startDateTextField.inputView;
     
     //Format time and date string to 'Day, Month date year'
@@ -48,8 +58,25 @@
     //set date format parameters, format date picker
     [dateFormatter setDateFormat:@" ' 'EEEE MMMM d yyyy'"];
     NSString *strStartDate = [dateFormatter stringFromDate:picker.date];
+   
     
     self.startDateTextField.text=[NSString stringWithFormat:@"%@",strStartDate];
+    
+}
+
+//Update date text fields with values selected from DatePicker
+-(void)updateEndDateTextField:(id)sender{ //(id)sender
+    UIDatePicker *picker=(UIDatePicker *)self.endDateTextField.inputView;
+    
+    //Format time and date string to 'Day, Month date year'
+    //Instantiate new NSDateFormatter object
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
+    //set date format parameters, format date picker
+    [dateFormatter setDateFormat:@" ' 'EEEE MMMM d yyyy'"];
+    NSString *strEndDate = [dateFormatter stringFromDate:picker.date];
+    
+    
+    self.endDateTextField.text=[NSString stringWithFormat:@"%@",strEndDate];
 }
 
 

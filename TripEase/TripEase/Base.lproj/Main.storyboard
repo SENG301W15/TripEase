@@ -162,16 +162,29 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Start Date and Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWp-cs-g0o">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Start Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWp-cs-g0o">
                                 <rect key="frame" x="26" y="190" width="175" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="End Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ep-NC-P9b">
+                                <rect key="frame" x="26" y="249" width="175" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tap to select date" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5hF-Te-8Po">
+                                <rect key="frame" x="16" y="270" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Pqm-HN-dpI" firstAttribute="leading" secondItem="sJs-mP-jfx" secondAttribute="leadingMargin" id="5v1-Fh-Fic"/>
+                            <constraint firstItem="5hF-Te-8Po" firstAttribute="trailing" secondItem="sJs-mP-jfx" secondAttribute="trailingMargin" id="88s-lQ-fO2"/>
+                            <constraint firstItem="9Ep-NC-P9b" firstAttribute="top" secondItem="1wm-wu-dA3" secondAttribute="bottom" constant="8" id="Bud-kz-nfo"/>
                             <constraint firstItem="i2u-pt-ObZ" firstAttribute="top" secondItem="3e6-QL-8Nn" secondAttribute="bottom" id="CmP-zA-533"/>
                             <constraint firstItem="Pqm-HN-dpI" firstAttribute="trailing" secondItem="sJs-mP-jfx" secondAttribute="trailingMargin" id="FBD-vI-NQO"/>
                             <constraint firstItem="g1z-tT-JZr" firstAttribute="leading" secondItem="sJs-mP-jfx" secondAttribute="leadingMargin" constant="10" id="FR4-5h-eAZ"/>
@@ -180,6 +193,7 @@
                             <constraint firstItem="Pqm-HN-dpI" firstAttribute="trailing" secondItem="sJs-mP-jfx" secondAttribute="trailingMargin" id="J3D-zg-JXv"/>
                             <constraint firstItem="3e6-QL-8Nn" firstAttribute="top" secondItem="MxV-uy-yfB" secondAttribute="bottom" constant="8" id="KfG-jL-SCS"/>
                             <constraint firstItem="aWp-cs-g0o" firstAttribute="top" secondItem="Pqm-HN-dpI" secondAttribute="bottom" constant="8" id="NaA-cy-gaZ"/>
+                            <constraint firstItem="5hF-Te-8Po" firstAttribute="top" secondItem="9Ep-NC-P9b" secondAttribute="bottom" id="Vpa-AV-Fa2"/>
                             <constraint firstItem="Pqm-HN-dpI" firstAttribute="top" secondItem="g1z-tT-JZr" secondAttribute="bottom" id="Zl5-pJ-fQe"/>
                             <constraint firstItem="1wm-wu-dA3" firstAttribute="top" secondItem="aWp-cs-g0o" secondAttribute="bottom" id="aiE-b8-Qwl"/>
                             <constraint firstItem="Pqm-HN-dpI" firstAttribute="leading" secondItem="sJs-mP-jfx" secondAttribute="leadingMargin" id="bqe-Jc-fgd"/>
@@ -187,6 +201,7 @@
                             <constraint firstItem="1wm-wu-dA3" firstAttribute="leading" secondItem="sJs-mP-jfx" secondAttribute="leadingMargin" id="et7-kL-5bQ"/>
                             <constraint firstItem="i2u-pt-ObZ" firstAttribute="top" secondItem="3e6-QL-8Nn" secondAttribute="bottom" id="fNY-fY-b7N"/>
                             <constraint firstAttribute="centerX" secondItem="Pqm-HN-dpI" secondAttribute="centerX" id="xSj-PP-wrH"/>
+                            <constraint firstItem="5hF-Te-8Po" firstAttribute="leading" secondItem="sJs-mP-jfx" secondAttribute="leadingMargin" id="xlk-ir-X0L"/>
                             <constraint firstItem="i2u-pt-ObZ" firstAttribute="trailing" secondItem="sJs-mP-jfx" secondAttribute="trailingMargin" id="ym9-ZJ-a1h"/>
                             <constraint firstItem="1wm-wu-dA3" firstAttribute="top" secondItem="aWp-cs-g0o" secondAttribute="bottom" id="zu2-dm-7VB"/>
                         </constraints>
@@ -204,6 +219,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="endDateTextField" destination="5hF-Te-8Po" id="mGK-pL-8kG"/>
                         <outlet property="startDateTextField" destination="1wm-wu-dA3" id="cNU-xB-MuL"/>
                     </connections>
                 </viewController>
