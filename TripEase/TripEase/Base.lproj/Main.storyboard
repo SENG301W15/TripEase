@@ -45,12 +45,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Anything Else Your Friends Need To Know?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2O0-5g-QTd">
-                                <rect key="frame" x="45" y="317" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e.g. August 25, 2015" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MgC-hP-LeL">
                                 <rect key="frame" x="35" y="272" width="568" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -67,7 +61,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GON-Xv-hBJ" userLabel="DetailsTextField">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GON-Xv-hBJ" userLabel="DetailsTextField">
                                 <rect key="frame" x="35" y="339" width="568" height="206"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
@@ -76,13 +70,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="2O0-5g-QTd" firstAttribute="top" secondItem="MgC-hP-LeL" secondAttribute="bottom" constant="8" id="1PN-sW-bcf"/>
                             <constraint firstItem="Rya-p8-434" firstAttribute="top" secondItem="514-Mg-WLS" secondAttribute="bottom" id="6bP-iI-709"/>
                             <constraint firstItem="MgC-hP-LeL" firstAttribute="top" secondItem="wzV-55-CoB" secondAttribute="bottom" id="CVs-Dx-Aut"/>
                             <constraint firstItem="wzV-55-CoB" firstAttribute="top" secondItem="Nsp-7M-DHf" secondAttribute="bottom" constant="8" id="PvS-XA-8S7"/>
                             <constraint firstItem="Rya-p8-434" firstAttribute="top" secondItem="514-Mg-WLS" secondAttribute="bottom" id="aNL-yC-MJF"/>
                             <constraint firstItem="nDR-v8-IMD" firstAttribute="top" secondItem="Rya-p8-434" secondAttribute="bottom" constant="8" id="acU-dy-KB3"/>
-                            <constraint firstItem="GON-Xv-hBJ" firstAttribute="top" secondItem="2O0-5g-QTd" secondAttribute="bottom" constant="1" id="qzY-iD-AxJ"/>
                             <constraint firstItem="fyP-z1-fBB" firstAttribute="top" secondItem="nDR-v8-IMD" secondAttribute="bottom" id="s6Z-I5-6pB"/>
                             <constraint firstItem="Nsp-7M-DHf" firstAttribute="top" secondItem="lSO-PN-pwU" secondAttribute="bottom" id="sZw-xz-IR4"/>
                             <constraint firstItem="lSO-PN-pwU" firstAttribute="top" secondItem="fyP-z1-fBB" secondAttribute="bottom" constant="8" id="zAP-nx-2kZ"/>
@@ -179,6 +171,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="Hope you can come on the trip!" translatesAutoresizingMaskIntoConstraints="NO" id="5S5-04-dZr" userLabel="detailTextView">
+                                <rect key="frame" x="16" y="329" width="568" height="263"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Anything Else Your Friends Need To Know?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PfQ-qo-J6N">
+                                <rect key="frame" x="26" y="308" width="372" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -193,15 +197,21 @@
                             <constraint firstItem="Pqm-HN-dpI" firstAttribute="trailing" secondItem="sJs-mP-jfx" secondAttribute="trailingMargin" id="J3D-zg-JXv"/>
                             <constraint firstItem="3e6-QL-8Nn" firstAttribute="top" secondItem="MxV-uy-yfB" secondAttribute="bottom" constant="8" id="KfG-jL-SCS"/>
                             <constraint firstItem="aWp-cs-g0o" firstAttribute="top" secondItem="Pqm-HN-dpI" secondAttribute="bottom" constant="8" id="NaA-cy-gaZ"/>
+                            <constraint firstItem="5S5-04-dZr" firstAttribute="top" secondItem="PfQ-qo-J6N" secondAttribute="bottom" id="Ooo-km-Yum"/>
+                            <constraint firstItem="PfQ-qo-J6N" firstAttribute="top" secondItem="5hF-Te-8Po" secondAttribute="bottom" constant="8" id="SMI-MX-SJ7"/>
                             <constraint firstItem="5hF-Te-8Po" firstAttribute="top" secondItem="9Ep-NC-P9b" secondAttribute="bottom" id="Vpa-AV-Fa2"/>
                             <constraint firstItem="Pqm-HN-dpI" firstAttribute="top" secondItem="g1z-tT-JZr" secondAttribute="bottom" id="Zl5-pJ-fQe"/>
+                            <constraint firstItem="PfQ-qo-J6N" firstAttribute="leading" secondItem="sJs-mP-jfx" secondAttribute="leadingMargin" constant="10" id="aIi-Na-aYv"/>
                             <constraint firstItem="1wm-wu-dA3" firstAttribute="top" secondItem="aWp-cs-g0o" secondAttribute="bottom" id="aiE-b8-Qwl"/>
                             <constraint firstItem="Pqm-HN-dpI" firstAttribute="leading" secondItem="sJs-mP-jfx" secondAttribute="leadingMargin" id="bqe-Jc-fgd"/>
+                            <constraint firstItem="5S5-04-dZr" firstAttribute="trailing" secondItem="sJs-mP-jfx" secondAttribute="trailingMargin" id="ctM-7F-g4j"/>
                             <constraint firstItem="g1z-tT-JZr" firstAttribute="top" secondItem="i2u-pt-ObZ" secondAttribute="bottom" constant="8" id="dXI-o7-Ucl"/>
                             <constraint firstItem="1wm-wu-dA3" firstAttribute="leading" secondItem="sJs-mP-jfx" secondAttribute="leadingMargin" id="et7-kL-5bQ"/>
                             <constraint firstItem="i2u-pt-ObZ" firstAttribute="top" secondItem="3e6-QL-8Nn" secondAttribute="bottom" id="fNY-fY-b7N"/>
                             <constraint firstAttribute="centerX" secondItem="Pqm-HN-dpI" secondAttribute="centerX" id="xSj-PP-wrH"/>
                             <constraint firstItem="5hF-Te-8Po" firstAttribute="leading" secondItem="sJs-mP-jfx" secondAttribute="leadingMargin" id="xlk-ir-X0L"/>
+                            <constraint firstItem="5S5-04-dZr" firstAttribute="top" secondItem="PfQ-qo-J6N" secondAttribute="bottom" id="yME-pP-0q5"/>
+                            <constraint firstItem="5S5-04-dZr" firstAttribute="leading" secondItem="sJs-mP-jfx" secondAttribute="leadingMargin" id="yan-jy-0Pw"/>
                             <constraint firstItem="i2u-pt-ObZ" firstAttribute="trailing" secondItem="sJs-mP-jfx" secondAttribute="trailingMargin" id="ym9-ZJ-a1h"/>
                             <constraint firstItem="1wm-wu-dA3" firstAttribute="top" secondItem="aWp-cs-g0o" secondAttribute="bottom" id="zu2-dm-7VB"/>
                         </constraints>
@@ -219,6 +229,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="detailTextView" destination="5S5-04-dZr" id="CQQ-bG-2Ek"/>
                         <outlet property="endDateTextField" destination="5hF-Te-8Po" id="mGK-pL-8kG"/>
                         <outlet property="startDateTextField" destination="1wm-wu-dA3" id="cNU-xB-MuL"/>
                     </connections>

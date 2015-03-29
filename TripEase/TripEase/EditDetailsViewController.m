@@ -12,7 +12,8 @@
 @interface EditDetailsViewController ()
 
 
-@property (weak, nonatomic) IBOutlet UITextView *DetailTextField;
+@property (weak, nonatomic) IBOutlet UITextView *detailTextView;
+
 
 @property (weak, nonatomic) IBOutlet UITextField *startDateTextField;
 
@@ -25,9 +26,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     //Apply border around the "Additional Details" text field
-    self.DetailTextField.layer.borderWidth=1.0;
-    self.DetailTextField.layer.cornerRadius=8;
-    self.DetailTextField.layer.borderColor=[[UIColor grayColor]CGColor];
+    self.detailTextView.layer.borderWidth=1.0;
+    self.detailTextView.layer.cornerRadius=7;
+    self.detailTextView.layer.borderColor=[[[UIColor grayColor] colorWithAlphaComponent:0.2]CGColor];
     
     //Display date picker wheel when user taps start date text box
     UIDatePicker *startDatePicker = [[UIDatePicker alloc]init];
