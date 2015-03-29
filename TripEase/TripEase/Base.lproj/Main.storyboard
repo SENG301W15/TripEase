@@ -53,12 +53,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="No Additional Details Yet!" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8CS-hu-epy" userLabel="DetailsLabel">
-                                <rect key="frame" x="16" y="308" width="568" height="183"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RoA-IA-922">
                                 <rect key="frame" x="244" y="521" width="113" height="30"/>
                                 <state key="normal" title="Update RSVP!">
@@ -78,6 +72,12 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="No additional details yet!" translatesAutoresizingMaskIntoConstraints="NO" id="xtS-Q3-vcl" userLabel="extraDetailsTextView">
+                                <rect key="frame" x="16" y="317" width="568" height="196"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.098165854624041371" green="1" blue="0.037738983063292708" alpha="1" colorSpace="calibratedRGB"/>
@@ -88,16 +88,17 @@
                             <constraint firstItem="x7b-cb-NCy" firstAttribute="top" secondItem="uaf-6E-jd1" secondAttribute="bottom" constant="33" id="AGW-Qw-V9W"/>
                             <constraint firstItem="seq-5K-wCw" firstAttribute="trailing" secondItem="PEz-kA-Tol" secondAttribute="trailingMargin" id="B3a-fX-wNT"/>
                             <constraint firstItem="s5i-Fy-Dnj" firstAttribute="leading" secondItem="PEz-kA-Tol" secondAttribute="leadingMargin" id="DzK-f8-IP5"/>
+                            <constraint firstItem="xtS-Q3-vcl" firstAttribute="leading" secondItem="PEz-kA-Tol" secondAttribute="leadingMargin" id="GXj-fp-Lud"/>
                             <constraint firstItem="fKO-Cn-8ls" firstAttribute="trailing" secondItem="PEz-kA-Tol" secondAttribute="trailingMargin" id="IAR-fO-B42"/>
+                            <constraint firstItem="RoA-IA-922" firstAttribute="top" secondItem="xtS-Q3-vcl" secondAttribute="bottom" constant="8" id="Jhn-3K-7po"/>
                             <constraint firstItem="seq-5K-wCw" firstAttribute="top" secondItem="NvP-IJ-ngZ" secondAttribute="bottom" constant="33" id="Ltu-h8-jgg"/>
                             <constraint firstItem="fKO-Cn-8ls" firstAttribute="trailing" secondItem="PEz-kA-Tol" secondAttribute="trailingMargin" id="Q6l-IX-cwu"/>
                             <constraint firstItem="x7b-cb-NCy" firstAttribute="top" secondItem="uaf-6E-jd1" secondAttribute="bottom" constant="33" id="Qa0-0W-8Ek"/>
-                            <constraint firstItem="8CS-hu-epy" firstAttribute="leading" secondItem="PEz-kA-Tol" secondAttribute="leadingMargin" id="T4f-hk-sgN"/>
                             <constraint firstItem="NvP-IJ-ngZ" firstAttribute="trailing" secondItem="PEz-kA-Tol" secondAttribute="trailingMargin" id="UTE-fe-yD2"/>
                             <constraint firstItem="seq-5K-wCw" firstAttribute="leading" secondItem="uaf-6E-jd1" secondAttribute="trailing" constant="4" id="XhJ-X5-8oz"/>
                             <constraint firstItem="rWY-AO-ftS" firstAttribute="top" secondItem="seq-5K-wCw" secondAttribute="bottom" constant="33" id="ZKX-QE-1aY"/>
-                            <constraint firstItem="8CS-hu-epy" firstAttribute="trailing" secondItem="PEz-kA-Tol" secondAttribute="trailingMargin" id="aQV-es-V0d"/>
                             <constraint firstItem="PGt-af-OpS" firstAttribute="leading" secondItem="PEz-kA-Tol" secondAttribute="leadingMargin" id="b6G-qm-83Q"/>
+                            <constraint firstItem="xtS-Q3-vcl" firstAttribute="trailing" secondItem="PEz-kA-Tol" secondAttribute="trailingMargin" id="eSy-83-6Uv"/>
                             <constraint firstItem="s5i-Fy-Dnj" firstAttribute="trailing" secondItem="PEz-kA-Tol" secondAttribute="trailingMargin" id="fG9-PC-cRC"/>
                             <constraint firstItem="HLR-Oa-2K0" firstAttribute="top" secondItem="RoA-IA-922" secondAttribute="bottom" constant="8" id="ofb-CI-9ed"/>
                             <constraint firstItem="uaf-6E-jd1" firstAttribute="leading" secondItem="PEz-kA-Tol" secondAttribute="leadingMargin" id="pf5-DM-cxp"/>
@@ -123,7 +124,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="endDateText" destination="fKO-Cn-8ls" id="YSh-Xw-Wcm"/>
-                        <outlet property="extraDetailsText" destination="8CS-hu-epy" id="sGZ-Oa-SEW"/>
+                        <outlet property="extraDetailsText" destination="xtS-Q3-vcl" id="VZj-Xy-zpa"/>
                         <outlet property="startDateText" destination="rWY-AO-ftS" id="sC3-Vp-bTz"/>
                         <outlet property="tripLocationText" destination="seq-5K-wCw" id="Gfl-kN-PRs"/>
                         <outlet property="tripNameText" destination="NvP-IJ-ngZ" id="mvn-zL-dhi"/>

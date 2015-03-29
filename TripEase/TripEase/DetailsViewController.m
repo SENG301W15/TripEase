@@ -17,8 +17,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *tripLocationText;
 @property (weak, nonatomic) IBOutlet UILabel *startDateText;
 @property (weak, nonatomic) IBOutlet UILabel *endDateText;
-@property (weak, nonatomic) IBOutlet UILabel *extraDetailsText;
 
+@property (weak, nonatomic) IBOutlet UITextView *extraDetailsText;
 
  
 @end
@@ -29,6 +29,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    //Apply border around the "Additional Details" text field
+    self.extraDetailsText.layer.borderWidth=1.0;
+    self.extraDetailsText.layer.cornerRadius=7;
+    self.extraDetailsText.layer.borderColor=[[[UIColor grayColor] colorWithAlphaComponent:0.2]CGColor];
     
 }
 
