@@ -17,67 +17,96 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e.g. Green Mountain Campground" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fyP-z1-fBB">
-                                <rect key="frame" x="35" y="154" width="568" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e.g. August 22, 2015" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nsp-7M-DHf">
-                                <rect key="frame" x="35" y="213" width="568" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Trip Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nDR-v8-IMD">
-                                <rect key="frame" x="45" y="133" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Trip Name Yet!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NvP-IJ-ngZ" userLabel="TripNameLabel">
+                                <rect key="frame" x="16" y="126" width="568" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Start Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lSO-PN-pwU">
-                                <rect key="frame" x="45" y="192" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are the Trip Organizer!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5i-Fy-Dnj" userLabel="UserIDLabel">
+                                <rect key="frame" x="16" y="72" width="568" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="End Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzV-55-CoB">
-                                <rect key="frame" x="45" y="251" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Location:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uaf-6E-jd1">
+                                <rect key="frame" x="16" y="180" width="84" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e.g. August 25, 2015" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MgC-hP-LeL">
-                                <rect key="frame" x="35" y="272" width="568" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Trip Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="514-Mg-WLS">
-                                <rect key="frame" x="45" y="-34" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="From:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x7b-cb-NCy">
+                                <rect key="frame" x="16" y="234" width="79" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e.g. Camping Extravaganza 2015" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rya-p8-434">
-                                <rect key="frame" x="35" y="95" width="568" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GON-Xv-hBJ" userLabel="DetailsTextField">
-                                <rect key="frame" x="35" y="339" width="568" height="206"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardAppearance="alert"/>
-                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="No Location Yet!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="seq-5K-wCw" userLabel="LocationLabel">
+                                <rect key="frame" x="104" y="180" width="480" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="No Start Date Yet!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rWY-AO-ftS" userLabel="StartDateLabel">
+                                <rect key="frame" x="104" y="234" width="159" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="No Additional Details Yet!" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8CS-hu-epy" userLabel="DetailsLabel">
+                                <rect key="frame" x="16" y="308" width="568" height="183"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RoA-IA-922">
+                                <rect key="frame" x="244" y="521" width="113" height="30"/>
+                                <state key="normal" title="Update RSVP!">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="When:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PGt-af-OpS">
+                                <rect key="frame" x="16" y="288" width="79" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="No End Date Yet!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKO-Cn-8ls" userLabel="EndDateLabel">
+                                <rect key="frame" x="104" y="288" width="476" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.098165854624041371" green="1" blue="0.037738983063292708" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Rya-p8-434" firstAttribute="top" secondItem="514-Mg-WLS" secondAttribute="bottom" id="6bP-iI-709"/>
-                            <constraint firstItem="MgC-hP-LeL" firstAttribute="top" secondItem="wzV-55-CoB" secondAttribute="bottom" id="CVs-Dx-Aut"/>
-                            <constraint firstItem="wzV-55-CoB" firstAttribute="top" secondItem="Nsp-7M-DHf" secondAttribute="bottom" constant="8" id="PvS-XA-8S7"/>
-                            <constraint firstItem="Rya-p8-434" firstAttribute="top" secondItem="514-Mg-WLS" secondAttribute="bottom" id="aNL-yC-MJF"/>
-                            <constraint firstItem="nDR-v8-IMD" firstAttribute="top" secondItem="Rya-p8-434" secondAttribute="bottom" constant="8" id="acU-dy-KB3"/>
-                            <constraint firstItem="fyP-z1-fBB" firstAttribute="top" secondItem="nDR-v8-IMD" secondAttribute="bottom" id="s6Z-I5-6pB"/>
-                            <constraint firstItem="Nsp-7M-DHf" firstAttribute="top" secondItem="lSO-PN-pwU" secondAttribute="bottom" id="sZw-xz-IR4"/>
-                            <constraint firstItem="lSO-PN-pwU" firstAttribute="top" secondItem="fyP-z1-fBB" secondAttribute="bottom" constant="8" id="zAP-nx-2kZ"/>
+                            <constraint firstItem="NvP-IJ-ngZ" firstAttribute="leading" secondItem="PEz-kA-Tol" secondAttribute="leadingMargin" id="2Bg-DP-daf"/>
+                            <constraint firstItem="fKO-Cn-8ls" firstAttribute="leading" secondItem="PGt-af-OpS" secondAttribute="trailing" constant="13" id="302-oo-jln"/>
+                            <constraint firstItem="fKO-Cn-8ls" firstAttribute="top" secondItem="rWY-AO-ftS" secondAttribute="bottom" constant="33" id="9zR-Dc-TBN"/>
+                            <constraint firstItem="x7b-cb-NCy" firstAttribute="top" secondItem="uaf-6E-jd1" secondAttribute="bottom" constant="33" id="AGW-Qw-V9W"/>
+                            <constraint firstItem="seq-5K-wCw" firstAttribute="trailing" secondItem="PEz-kA-Tol" secondAttribute="trailingMargin" id="B3a-fX-wNT"/>
+                            <constraint firstItem="s5i-Fy-Dnj" firstAttribute="leading" secondItem="PEz-kA-Tol" secondAttribute="leadingMargin" id="DzK-f8-IP5"/>
+                            <constraint firstItem="fKO-Cn-8ls" firstAttribute="trailing" secondItem="PEz-kA-Tol" secondAttribute="trailingMargin" id="IAR-fO-B42"/>
+                            <constraint firstItem="seq-5K-wCw" firstAttribute="top" secondItem="NvP-IJ-ngZ" secondAttribute="bottom" constant="33" id="Ltu-h8-jgg"/>
+                            <constraint firstItem="fKO-Cn-8ls" firstAttribute="trailing" secondItem="PEz-kA-Tol" secondAttribute="trailingMargin" id="Q6l-IX-cwu"/>
+                            <constraint firstItem="x7b-cb-NCy" firstAttribute="top" secondItem="uaf-6E-jd1" secondAttribute="bottom" constant="33" id="Qa0-0W-8Ek"/>
+                            <constraint firstItem="8CS-hu-epy" firstAttribute="leading" secondItem="PEz-kA-Tol" secondAttribute="leadingMargin" id="T4f-hk-sgN"/>
+                            <constraint firstItem="NvP-IJ-ngZ" firstAttribute="trailing" secondItem="PEz-kA-Tol" secondAttribute="trailingMargin" id="UTE-fe-yD2"/>
+                            <constraint firstItem="seq-5K-wCw" firstAttribute="leading" secondItem="uaf-6E-jd1" secondAttribute="trailing" constant="4" id="XhJ-X5-8oz"/>
+                            <constraint firstItem="rWY-AO-ftS" firstAttribute="top" secondItem="seq-5K-wCw" secondAttribute="bottom" constant="33" id="ZKX-QE-1aY"/>
+                            <constraint firstItem="8CS-hu-epy" firstAttribute="trailing" secondItem="PEz-kA-Tol" secondAttribute="trailingMargin" id="aQV-es-V0d"/>
+                            <constraint firstItem="PGt-af-OpS" firstAttribute="leading" secondItem="PEz-kA-Tol" secondAttribute="leadingMargin" id="b6G-qm-83Q"/>
+                            <constraint firstItem="s5i-Fy-Dnj" firstAttribute="trailing" secondItem="PEz-kA-Tol" secondAttribute="trailingMargin" id="fG9-PC-cRC"/>
+                            <constraint firstItem="HLR-Oa-2K0" firstAttribute="top" secondItem="RoA-IA-922" secondAttribute="bottom" constant="8" id="ofb-CI-9ed"/>
+                            <constraint firstItem="uaf-6E-jd1" firstAttribute="leading" secondItem="PEz-kA-Tol" secondAttribute="leadingMargin" id="pf5-DM-cxp"/>
+                            <constraint firstItem="NvP-IJ-ngZ" firstAttribute="top" secondItem="s5i-Fy-Dnj" secondAttribute="bottom" constant="33" id="qGR-SF-VsA"/>
+                            <constraint firstAttribute="centerX" secondItem="RoA-IA-922" secondAttribute="centerX" id="rSl-dq-pkq"/>
+                            <constraint firstItem="seq-5K-wCw" firstAttribute="top" secondItem="NvP-IJ-ngZ" secondAttribute="bottom" constant="33" id="sS7-Lo-O8c"/>
+                            <constraint firstItem="PGt-af-OpS" firstAttribute="top" secondItem="x7b-cb-NCy" secondAttribute="bottom" constant="33" id="t4k-NF-Mod"/>
+                            <constraint firstItem="x7b-cb-NCy" firstAttribute="leading" secondItem="PEz-kA-Tol" secondAttribute="leadingMargin" id="yre-vl-X5y"/>
+                            <constraint firstItem="s5i-Fy-Dnj" firstAttribute="top" secondItem="bPY-mT-yjX" secondAttribute="bottom" constant="8" id="ztk-3L-JQJ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Details" id="VVK-IK-icd">
@@ -92,6 +121,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="endDateText" destination="fKO-Cn-8ls" id="YSh-Xw-Wcm"/>
+                        <outlet property="extraDetailsText" destination="8CS-hu-epy" id="sGZ-Oa-SEW"/>
+                        <outlet property="startDateText" destination="rWY-AO-ftS" id="sC3-Vp-bTz"/>
+                        <outlet property="tripLocationText" destination="seq-5K-wCw" id="Gfl-kN-PRs"/>
+                        <outlet property="tripNameText" destination="NvP-IJ-ngZ" id="mvn-zL-dhi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d3S-qF-mhe" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Rw4-al-iBR" userLabel="Exit" sceneMemberID="exit"/>
@@ -144,7 +180,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e.g. Camping Extravaganza 2015" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i2u-pt-ObZ">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e.g. Camping Extravaganza 2015" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i2u-pt-ObZ" userLabel="tripNameTextField">
                                 <rect key="frame" x="16" y="93" width="568" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -231,7 +267,10 @@
                     <connections>
                         <outlet property="detailTextView" destination="5S5-04-dZr" id="CQQ-bG-2Ek"/>
                         <outlet property="endDateTextField" destination="5hF-Te-8Po" id="mGK-pL-8kG"/>
+                        <outlet property="locationTextField" destination="Pqm-HN-dpI" id="6RV-9j-Jni"/>
+                        <outlet property="saveButton" destination="KF9-5g-3fa" id="HDz-Yn-llq"/>
                         <outlet property="startDateTextField" destination="1wm-wu-dA3" id="cNU-xB-MuL"/>
+                        <outlet property="tripNameTextField" destination="i2u-pt-ObZ" id="8lK-XB-fmU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>

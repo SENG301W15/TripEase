@@ -8,6 +8,7 @@
 //
 
 #import "EditDetailsViewController.h"
+#import "DetailsObject.h"
 
 @interface EditDetailsViewController ()
 
@@ -18,6 +19,14 @@
 @property (weak, nonatomic) IBOutlet UITextField *startDateTextField;
 
 @property (weak, nonatomic) IBOutlet UITextField *endDateTextField;
+
+@property (weak, nonatomic) IBOutlet UITextField *tripNameTextField;
+
+@property (weak, nonatomic) IBOutlet UITextField *locationTextField;
+
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *saveButton;
+
+//@property DetailsObject *details;
 
 @end
 
@@ -99,21 +108,44 @@
     // Pass the selected object to the new view controller.
     
     
-    //Check whether entered item should be saved
+    //Check whether the user tapped Save
     
-    /*
+    
     //If save button not tapped, do nothing and return
     if (sender != self.saveButton) return;
     
     //If reached this line - save button was tapped
-    //If any text was entered do the following:
-    if (self.textField.text.length > 0) {
-        self.PackingListItem = [[PackingListItem alloc] init];  //add new PackingListItem to array
-        self.packingListItem.itemName = self.textField.text;    //name of new item = text user entered
-        self.packingListItem.completed = NO;                           //Initially item is not completed
+    
+    //Instantiate new DetailsObject to hold the data
+    self.details = [[DetailsObject alloc]init];
+    
+    //If text was entered in trip name text field, save
+    if(self.tripNameTextField.text.length>0){
+        self.details.tripName=self.tripNameTextField.text;
     }
+    
+    //If text was entered in trip location text field, save
+    if(self.locationTextField.text.length>0){
+        self.details.tripLocation=self.locationTextField.text;
+    }
+    
+    //If a start date was selected, save
+    if(self.startDateTextField.text.length>0){
+        self.details.startDate=self.startDateTextField.text;
+    }
+    
+    //If an end date was selected, save
+    if(self.endDateTextField.text.length>0){
+        self.details.endDate=self.endDateTextField.text;
+    }
+    
+    //If extra details were netered, save
+    if(self.detailTextView.text.length>0){
+        self.details.extraDetails=self.detailTextView.text;
+    }
+    
      
-     */
+    
 }
 
 @end

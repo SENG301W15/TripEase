@@ -10,5 +10,10 @@
 
 @interface DetailsObject : NSObject
 
+@property NSString *tripName;
+@property NSString *tripLocation;
+@property NSString *startDate;
+@property NSString *endDate;
+@property NSString *extraDetails;
 
 @end

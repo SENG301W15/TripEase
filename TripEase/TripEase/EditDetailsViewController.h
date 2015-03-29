@@ -7,13 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DetailsObject.h"
 
 @interface EditDetailsViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UILabel *predictionLabel;
 - (IBAction)buttonPressed;
 
-
+@property DetailsObject *details;
 
 @end
 
