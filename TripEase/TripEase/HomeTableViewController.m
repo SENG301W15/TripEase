@@ -34,14 +34,15 @@
     //Recover the item that was added by the user, if any
     DetailsObject *details = source.deets;
     
-    TripObject *trip = [[TripObject alloc]init];
+    //TripObject *trip = [[TripObject alloc]init];
+
     
     //If a new trip was saved, update table with the new entry and refresh view
     //Users are required to enter a trip name in order to save a trip,
     //therefore it's sufficient to check for trip name being nil
     if(details.tripName!=nil){
-        trip.tripDetails=details;
-        [self.tripList addObject:trip];
+        self.activeTrip.tripDetails=details;
+        [self.tripList addObject:self.activeTrip];
         [self.tableView reloadData];
     }
    
@@ -57,20 +58,25 @@
     
     //We want to pass the active Trip Object down to the tab bar controller
     //so that it can be used to populate fields in the various tables
+    UINavigationItem *button  =(UINavigationItem *)sender;
     
-    if(sender!=self.nwTripButton){
+    
+    //[button ]
+    if([button.title isEqualToString:@"New Trip"]){
+    //if([sender isEqual:self.nwTripButton]){
         //If it's a new trip, instantiate a new TripObject
         self.activeTrip = [[TripObject alloc]init];
     }
     //Otherwise, an existing trip will have been stored into activeTrip when the user selects a row
     //and didSelectRowAtIndexPath is called
     
+    
     //if([[segue identifier] isEqualToString:@"segueFromCell"]){
     
     
     // THESE LINES ARE CAUSING THE CRASH
         //Get reference to destination view controller i.e. DetailsViewController
-        DetailsViewController *vc = [segue destinationViewController];
+        //DetailsViewController *vc = [segue destinationViewController];
         //Pass the active TripObject to the DetailsViewController
         //[vc setExistingTrip:self.activeTrip];
     
@@ -83,6 +89,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    //Instantiate New Trip button with title
+    [self.nwTripButton setTitle:@"New Trip"];
+    
+
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;

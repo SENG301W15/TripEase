@@ -50,9 +50,7 @@
     
     
     //existingDetails=HomeTableViewController.activeTrip.tripDetails;
-    
-    
-}
+    }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -20,6 +20,8 @@
 
 @property (nonatomic) TripObject *existingTrip;
 
+
+
 - (IBAction)unwindToDetails:(UIStoryboardSegue *)segue;
 
 @end

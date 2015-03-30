@@ -14,4 +14,7 @@
 
 @property TripObject *activeTrip;
 
+
+
+
 @end
