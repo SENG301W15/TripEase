@@ -7,8 +7,15 @@
 //
 
 #import "HomeTableViewController.h"
+#import "TripObject.h"
+#import "DetailsViewController.h"
+#import "DetailsObject.h"
 
 @interface HomeTableViewController ()
+
+@property NSMutableArray *tripList;
+
+@property TripObject *trip;
 
 @end
 
@@ -16,20 +23,23 @@
 
 - (IBAction)unwindToHome:(UIStoryboardSegue *)segue {
     
-    //Get the source view controller of the previous scene
-    //EditDetailsViewController *source = [segue sourceViewController];
     
-    /*
-     //Recover the item that was added by the user, if any
-     PackingListItem *item = source.packingListItem;
-     
-     //If item exists (i.e. if user entered any text), add item to the table and reload the view to display this
-     if (item != nil) {
-     [self.packingListItems addObject:item];
-     [self.tableView reloadData];
-     }
-     
-     */
+    //Get the source view controller of the previous scene
+
+    
+    DetailsViewController *source = [segue sourceViewController];
+    
+    //Recover the item that was added by the user, if any
+    DetailsObject *details = source.deets;
+    
+    TripObject *trip = [[TripObject alloc]init];
+    trip.tripDetails=details;
+    
+    [self.tripList addObject:trip];
+    [self.tableView reloadData];
+    
+    
+   
 }
 
 #pragma mark - Navigation
@@ -41,8 +51,7 @@
     
     
     //User has chosen to create a new trip, therefore instantiate a new TripObject
-    //FOLLOW THE TUTORIAL TO DO THE THING WITH THE TABLE HERE!!!
-    
+       
    
     
 }
@@ -57,6 +66,16 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
+    //Allocate the array for storing the list of trips
+    self.tripList = [[NSMutableArray alloc]init];
+    /*
+    TripObject *trip =[[TripObject alloc]init];
+    trip.tripDetails.tripName=@"Test Trip";
+  
+    [self.tripList addObject:trip];
+    [self.tableView reloadData];
+*/
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -67,26 +86,28 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    // Return the number of sections - home screen has only 1 section
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [self.tripList count];
 }
 
-/*
+
+//Display a cell in the given row
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TripPrototypeCell" forIndexPath:indexPath];
     
     // Configure the cell...
+    TripObject *trip = [self.tripList objectAtIndex:indexPath.row]; //instantiate new TripObject and insert into the array
+    cell.textLabel.text=trip.tripDetails.tripName; //label the cell with the trip's name
     
+    //return the contents of the selected cell
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.

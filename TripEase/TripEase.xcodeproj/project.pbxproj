@@ -12,6 +12,7 @@
 		0239292B1AC2052100AF522F /* PackingListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 023929291AC2052100AF522F /* PackingListTableViewController.m */; };
 		0239292C1AC2052100AF522F /* PackingListTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0239292A1AC2052100AF522F /* PackingListTableViewController.xib */; };
 		0239292F1AC2185100AF522F /* PackingListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0239292E1AC2185100AF522F /* PackingListItem.m */; };
+		0259C37A1AC90AA100EBB93A /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0259C3791AC90AA100EBB93A /* TabBarViewController.m */; };
 		63311C261AC606C100CE90D8 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63311C251AC606C100CE90D8 /* DetailsViewController.m */; };
 		63311C291AC607CA00CE90D8 /* TripObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 63311C281AC607CA00CE90D8 /* TripObject.m */; };
 		63311C2C1AC6080300CE90D8 /* DetailsObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 63311C2B1AC6080300CE90D8 /* DetailsObject.m */; };
@@ -52,6 +53,8 @@
 		0239292A1AC2052100AF522F /* PackingListTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PackingListTableViewController.xib; sourceTree = "<group>"; };
 		0239292D1AC2185100AF522F /* PackingListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PackingListItem.h; sourceTree = "<group>"; };
 		0239292E1AC2185100AF522F /* PackingListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PackingListItem.m; sourceTree = "<group>"; };
+		0259C3781AC90AA100EBB93A /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
+		0259C3791AC90AA100EBB93A /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
 		63311C241AC606C100CE90D8 /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
 		63311C251AC606C100CE90D8 /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
 		63311C271AC607CA00CE90D8 /* TripObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripObject.h; sourceTree = "<group>"; };
@@ -136,6 +139,8 @@
 				635DC3031A93C16400CCEEEA /* EditCostsViewController.h */,
 				635DC3041A93C16400CCEEEA /* EditCostsViewController.m */,
 				635DC3061A93C16400CCEEEA /* Main.storyboard */,
+				0259C3781AC90AA100EBB93A /* TabBarViewController.h */,
+				0259C3791AC90AA100EBB93A /* TabBarViewController.m */,
 				63311C3C1AC61D2600CE90D8 /* HomeTableViewController.h */,
 				63311C3D1AC61D2600CE90D8 /* HomeTableViewController.m */,
 				63311C391AC6155100CE90D8 /* InvitesTableViewController.h */,
@@ -318,6 +323,7 @@
 				635DC2FC1A93C16400CCEEEA /* main.m in Sources */,
 				63311C2F1AC6093800CE90D8 /* CostObject.m in Sources */,
 				63311C351AC6096900CE90D8 /* InvitesObject.m in Sources */,
+				0259C37A1AC90AA100EBB93A /* TabBarViewController.m in Sources */,
 				63311C2C1AC6080300CE90D8 /* DetailsObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

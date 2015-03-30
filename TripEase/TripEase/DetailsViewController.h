@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DetailsObject.h"
 
 @interface DetailsViewController : UIViewController
+
+@property DetailsObject *deets;
+
 
 - (IBAction)unwindToDetails:(UIStoryboardSegue *)segue;
 

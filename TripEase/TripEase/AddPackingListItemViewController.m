@@ -43,7 +43,7 @@
     //If reached this line - save button was tapped
     //If any text was entered do the following:
     if (self.textField.text.length > 0) {
-        self.PackingListItem = [[PackingListItem alloc] init];  //add new PackingListItem to array
+        self.PackingListItem = [[PackingListItem alloc] init];  //instantiate new packing list item 
         self.packingListItem.itemName = self.textField.text;    //name of new item = text user entered
         self.packingListItem.completed = NO;                           //Initially item is not completed
     }
