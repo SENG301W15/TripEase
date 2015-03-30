@@ -33,12 +33,15 @@
     DetailsObject *details = source.deets;
     
     TripObject *trip = [[TripObject alloc]init];
-    trip.tripDetails=details;
     
-    [self.tripList addObject:trip];
-    [self.tableView reloadData];
-    
-    
+    //If a new trip was saved, update table with the new entry and refresh view
+    //Users are required to enter a trip name in order to save a trip,
+    //therefore it's sufficient to check for trip name being nil
+    if(details.tripName!=nil){
+        trip.tripDetails=details;
+        [self.tripList addObject:trip];
+        [self.tableView reloadData];
+    }
    
 }
 

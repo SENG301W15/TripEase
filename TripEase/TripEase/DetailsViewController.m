@@ -48,28 +48,28 @@
     EditDetailsViewController *source = [segue sourceViewController];
     
     //Retrieve the DetailsObject from the EditDetailsViewController
-    DetailsObject *deets = [[DetailsObject alloc]init];
-    deets=source.details;
+    //DetailsObject *deets = [[DetailsObject alloc]init];
+    self.deets=source.details;
     
     //If new details were inputted in the edit screen, update appropriate static fields on this screen
-    if(deets.tripName!=nil){
-        self.tripNameText.text=deets.tripName;
+    if(self.deets.tripName!=nil){
+        self.tripNameText.text=self.deets.tripName;
     }
     
-    if(deets.tripLocation!=nil){
-        self.tripLocationText.text=deets.tripLocation;
+    if(self.deets.tripLocation!=nil){
+        self.tripLocationText.text=self.deets.tripLocation;
     }
     
-    if(deets.startDate!=nil){
-        self.startDateText.text=deets.startDate;
+    if(self.deets.startDate!=nil){
+        self.startDateText.text=self.deets.startDate;
     }
     
-    if(deets.endDate!=nil){
-        self.endDateText.text=deets.endDate;
+    if(self.deets.endDate!=nil){
+        self.endDateText.text=self.deets.endDate;
     }
     
-    if(deets.extraDetails!=nil){
-        self.extraDetailsText.text=deets.extraDetails;
+    if(self.deets.extraDetails!=nil){
+        self.extraDetailsText.text=self.deets.extraDetails;
         
     }
     
@@ -84,13 +84,14 @@
     // Pass the selected object to the new view controller.
     
     //Prepare fields of global deets to send up to Home screen upon unwind
+    /*
     self.deets = [[DetailsObject alloc]init];
     self.deets.tripName=self.tripNameText.text;
     self.deets.tripLocation=self.tripLocationText.text;
     self.deets.startDate=self.startDateText.text;
     self.deets.endDate=self.endDateText.text;
     self.deets.extraDetails=self.extraDetailsText.text;
-    
+    */
 }
 
 

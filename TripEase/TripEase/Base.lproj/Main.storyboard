@@ -256,12 +256,13 @@
                     <navigationItem key="navigationItem" title="Details" prompt="Edit Trip Info" id="CA1-uX-fpV">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="xsv-iV-GVh">
                             <connections>
-                                <segue destination="LVX-bD-tAQ" kind="unwind" unwindAction="unwindToDetails:" id="yKY-bl-RW5"/>
+                                <segue destination="LVX-bD-tAQ" kind="unwind" identifier="unwindToDetails" unwindAction="unwindToDetails:" id="yKY-bl-RW5"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="KF9-5g-3fa">
+                        <barButtonItem key="rightBarButtonItem" tag="1" systemItem="save" id="KF9-5g-3fa">
                             <connections>
-                                <segue destination="LVX-bD-tAQ" kind="unwind" unwindAction="unwindToDetails:" id="VlA-5F-47D"/>
+                                <action selector="saveButtonAction:" destination="9pv-A4-QxB" id="7tA-ua-Szx"/>
+                                <segue destination="LVX-bD-tAQ" kind="unwind" identifier="unwindToDetailsAlso" unwindAction="unwindToDetails:" id="VlA-5F-47D"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

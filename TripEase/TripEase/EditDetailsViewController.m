@@ -26,6 +26,9 @@
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *saveButton;
 
+
+
+
 //@property DetailsObject *details;
 
 @end
@@ -96,8 +99,28 @@
     // Dispose of any resources that can be recreated.
 }
 
+/*
 - (IBAction)buttonPressed {
     self.predictionLabel.text = @"YES";
+}
+*/
+
+
+
+//We want to enforce that the user MUST enter at least a trip name before saving.
+//This alert pops up if the user attempts to save without first entering a trip name
+- (void) showNoTitleAlert{
+    //Define the alert window
+    UIAlertView *noTitleAlert = [[UIAlertView alloc]
+                                 initWithTitle:@"Oops!"
+                                 message:@"You must enter a Trip Name before saving!"
+                                 delegate:nil
+                                 cancelButtonTitle:@"Ok"
+                                 otherButtonTitles:nil
+                                 ];
+    //display the alert
+    [noTitleAlert show];
+    //[noTitleAlert release];
 }
 
 #pragma mark - Navigation
@@ -115,6 +138,14 @@
     if (sender != self.saveButton) return;
     
     //If reached this line - save button was tapped
+    
+    /*
+    //Only permit save if at least a trip name was entered
+    //- if trip name not entered, display alert and do not segue
+    if(self.tripNameTextField.text.length==0){
+        [self showNoTitleAlert];
+    }
+    */
     
     //Instantiate new DetailsObject to hold the data
     self.details = [[DetailsObject alloc]init];
@@ -148,4 +179,21 @@
     
 }
 
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender{
+    if(sender==self.saveButton){
+    //if([identifier isEqualToString:@"unwindToDetails"]){
+        //Only permit save if at least a trip name was entered
+        //- if trip name not entered, display alert and do not segue
+        if(self.tripNameTextField.text.length==0){
+            [self showNoTitleAlert];
+            return NO;
+        }
+        
+    }
+    return YES;
+}
+
+- (IBAction)saveButtonAction:(id)sender {
+    
+}
 @end
