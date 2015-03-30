@@ -13,6 +13,7 @@
 		0239292C1AC2052100AF522F /* PackingListTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0239292A1AC2052100AF522F /* PackingListTableViewController.xib */; };
 		0239292F1AC2185100AF522F /* PackingListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0239292E1AC2185100AF522F /* PackingListItem.m */; };
 		0259C37A1AC90AA100EBB93A /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0259C3791AC90AA100EBB93A /* TabBarViewController.m */; };
+		02D61D041AC942EA00E07558 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02D61D021AC942EA00E07558 /* Main.storyboard */; };
 		63311C261AC606C100CE90D8 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63311C251AC606C100CE90D8 /* DetailsViewController.m */; };
 		63311C291AC607CA00CE90D8 /* TripObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 63311C281AC607CA00CE90D8 /* TripObject.m */; };
 		63311C2C1AC6080300CE90D8 /* DetailsObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 63311C2B1AC6080300CE90D8 /* DetailsObject.m */; };
@@ -28,7 +29,6 @@
 		635DC2FF1A93C16400CCEEEA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 635DC2FE1A93C16400CCEEEA /* AppDelegate.m */; };
 		635DC3021A93C16400CCEEEA /* EditDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 635DC3011A93C16400CCEEEA /* EditDetailsViewController.m */; };
 		635DC3051A93C16400CCEEEA /* EditCostsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 635DC3041A93C16400CCEEEA /* EditCostsViewController.m */; };
-		635DC3081A93C16400CCEEEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 635DC3061A93C16400CCEEEA /* Main.storyboard */; };
 		635DC30A1A93C16400CCEEEA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 635DC3091A93C16400CCEEEA /* Images.xcassets */; };
 		635DC30D1A93C16400CCEEEA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 635DC30B1A93C16400CCEEEA /* LaunchScreen.xib */; };
 		635DC3191A93C16400CCEEEA /* TripEaseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 635DC3181A93C16400CCEEEA /* TripEaseTests.m */; };
@@ -55,6 +55,7 @@
 		0239292E1AC2185100AF522F /* PackingListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PackingListItem.m; sourceTree = "<group>"; };
 		0259C3781AC90AA100EBB93A /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
 		0259C3791AC90AA100EBB93A /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
+		02D61D031AC942EA00E07558 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		63311C241AC606C100CE90D8 /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
 		63311C251AC606C100CE90D8 /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
 		63311C271AC607CA00CE90D8 /* TripObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripObject.h; sourceTree = "<group>"; };
@@ -85,7 +86,6 @@
 		635DC3011A93C16400CCEEEA /* EditDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditDetailsViewController.m; sourceTree = "<group>"; };
 		635DC3031A93C16400CCEEEA /* EditCostsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditCostsViewController.h; sourceTree = "<group>"; };
 		635DC3041A93C16400CCEEEA /* EditCostsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditCostsViewController.m; sourceTree = "<group>"; };
-		635DC3071A93C16400CCEEEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		635DC3091A93C16400CCEEEA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		635DC30C1A93C16400CCEEEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		635DC3121A93C16400CCEEEA /* TripEaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TripEaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,7 +138,6 @@
 				635DC3011A93C16400CCEEEA /* EditDetailsViewController.m */,
 				635DC3031A93C16400CCEEEA /* EditCostsViewController.h */,
 				635DC3041A93C16400CCEEEA /* EditCostsViewController.m */,
-				635DC3061A93C16400CCEEEA /* Main.storyboard */,
 				0259C3781AC90AA100EBB93A /* TabBarViewController.h */,
 				0259C3791AC90AA100EBB93A /* TabBarViewController.m */,
 				63311C3C1AC61D2600CE90D8 /* HomeTableViewController.h */,
@@ -149,6 +148,7 @@
 				63311C371AC6148E00CE90D8 /* SendInviteViewController.m */,
 				63311C251AC606C100CE90D8 /* DetailsViewController.m */,
 				63311C241AC606C100CE90D8 /* DetailsViewController.h */,
+				02D61D021AC942EA00E07558 /* Main.storyboard */,
 				63311C271AC607CA00CE90D8 /* TripObject.h */,
 				63311C331AC6096900CE90D8 /* InvitesObject.h */,
 				63311C341AC6096900CE90D8 /* InvitesObject.m */,
@@ -284,10 +284,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				635DC3081A93C16400CCEEEA /* Main.storyboard in Resources */,
 				0239292C1AC2052100AF522F /* PackingListTableViewController.xib in Resources */,
 				023929271AC2027700AF522F /* AddPackingListItemViewController.xib in Resources */,
 				633F04211AB9CD8400F0335C /* CostsViewController.xib in Resources */,
+				02D61D041AC942EA00E07558 /* Main.storyboard in Resources */,
 				635DC30D1A93C16400CCEEEA /* LaunchScreen.xib in Resources */,
 				635DC30A1A93C16400CCEEEA /* Images.xcassets in Resources */,
 			);
@@ -347,10 +347,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		635DC3061A93C16400CCEEEA /* Main.storyboard */ = {
+		02D61D021AC942EA00E07558 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				635DC3071A93C16400CCEEEA /* Base */,
+				02D61D031AC942EA00E07558 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

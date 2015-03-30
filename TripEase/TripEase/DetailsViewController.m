@@ -9,6 +9,10 @@
 #import "DetailsViewController.h"
 #import "EditDetailsViewController.h"
 #import "DetailsObject.h"
+#import "HomeTableViewController.h"
+#import "TripObject.h"
+
+
 
 @interface DetailsViewController ()
 
@@ -20,10 +24,13 @@
 
 @property (weak, nonatomic) IBOutlet UITextView *extraDetailsText;
 
+
  
 @end
 
 @implementation DetailsViewController
+
+@synthesize existingTrip;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -33,6 +40,17 @@
     self.extraDetailsText.layer.borderWidth=1.0;
     self.extraDetailsText.layer.cornerRadius=7;
     self.extraDetailsText.layer.borderColor=[[[UIColor grayColor] colorWithAlphaComponent:0.2]CGColor];
+    
+    //IS THIS THE CORRECT PLACE TO PUT THIS LOGIC????
+    //If the details object in the existing TripObject passed in by the HomeTableController is not nil,
+    //populate fields on this screen with the existing details fields
+    
+    //DetailsObject *existingDetails = [[DetailsObject alloc]init];
+   
+    
+    
+    //existingDetails=HomeTableViewController.activeTrip.tripDetails;
+    
     
 }
 

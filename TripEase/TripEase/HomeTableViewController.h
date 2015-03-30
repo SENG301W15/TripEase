@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TripObject.h"
 
 @interface HomeTableViewController : UITableViewController
 - (IBAction)unwindToHome:(UIStoryboardSegue *)segue;
+
+@property TripObject *activeTrip;
+
 @end

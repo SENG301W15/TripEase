@@ -845,9 +845,6 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="97M-SK-bud" id="ofW-EF-bg3">
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="49e-Tb-3d3" kind="presentation" id="bPM-ve-Rha"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -858,10 +855,13 @@
                     <navigationItem key="navigationItem" title="Home" id="dpN-hQ-xgo">
                         <barButtonItem key="rightBarButtonItem" title="New Trip" id="ftl-mX-x3Y">
                             <connections>
-                                <segue destination="49e-Tb-3d3" kind="presentation" id="BfW-kg-ZAx"/>
+                                <segue destination="49e-Tb-3d3" kind="presentation" identifier="segueToTabBar" id="BfW-kg-ZAx"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="nwTripButton" destination="dpN-hQ-xgo" id="RrK-Br-uq1"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F9B-fa-H5E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1183,7 +1183,4 @@
         <image name="sample-1012-sticky-note" width="28" height="28"/>
         <image name="sample-920-handbag" width="28" height="26"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="BfW-kg-ZAx"/>
-    </inferredMetricsTieBreakers>
 </document>

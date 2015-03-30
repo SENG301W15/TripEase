@@ -8,11 +8,17 @@
 
 #import <UIKit/UIKit.h>
 #import "DetailsObject.h"
+#import "HomeTableViewController.h"
+#import "TripObject.h"
 
-@interface DetailsViewController : UIViewController
+
+@interface DetailsViewController : UIViewController{
+    TripObject *existingTrip;
+}
 
 @property DetailsObject *deets;
 
+@property (nonatomic) TripObject *existingTrip;
 
 - (IBAction)unwindToDetails:(UIStoryboardSegue *)segue;
 

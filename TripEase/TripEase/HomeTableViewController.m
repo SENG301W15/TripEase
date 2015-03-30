@@ -17,6 +17,8 @@
 
 @property TripObject *trip;
 
+@property (weak, nonatomic) IBOutlet UINavigationItem *nwTripButton;
+
 @end
 
 @implementation HomeTableViewController
@@ -53,11 +55,30 @@
     // Pass the selected object to the new view controller.
     
     
-    //User has chosen to create a new trip, therefore instantiate a new TripObject
-       
+    //We want to pass the active Trip Object down to the tab bar controller
+    //so that it can be used to populate fields in the various tables
+    
+    if(sender!=self.nwTripButton){
+        //If it's a new trip, instantiate a new TripObject
+        self.activeTrip = [[TripObject alloc]init];
+    }
+    //Otherwise, an existing trip will have been stored into activeTrip when the user selects a row
+    //and didSelectRowAtIndexPath is called
+    
+    //if([[segue identifier] isEqualToString:@"segueFromCell"]){
+    
+    
+    // THESE LINES ARE CAUSING THE CRASH
+        //Get reference to destination view controller i.e. DetailsViewController
+        DetailsViewController *vc = [segue destinationViewController];
+        //Pass the active TripObject to the DetailsViewController
+        //[vc setExistingTrip:self.activeTrip];
+    
+     //}
    
     
 }
+
 
 
 - (void)viewDidLoad {
@@ -79,6 +100,12 @@
     [self.tableView reloadData];
 */
     
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    //Get TripObject stored in cell, if one exists
+    self.activeTrip = [self.tripList objectAtIndex:[indexPath row]];
+    [self performSegueWithIdentifier:@"segueToTabBar" sender:self];
 }
 
 - (void)didReceiveMemoryWarning {
