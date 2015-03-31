@@ -14,6 +14,7 @@
 
 @interface TripObject : NSObject
 
+@property NSInteger tripID; //A new unique ID will be created for each trip upon instantiation
 @property DetailsObject *tripDetails;
 @property CostObject *tripCost;
 @property PackingObject *packingObject;

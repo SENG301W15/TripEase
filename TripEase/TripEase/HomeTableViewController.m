@@ -43,7 +43,23 @@
     //therefore it's sufficient to check for trip name being nil
     if(details.tripName!=nil){
         trip.tripDetails=details;
-        [self.tripList addObject:trip];
+        
+        //Check whether a tripID has already been set for the active trip - create one if not
+        //(tripID==-1 indiactes that we are saving this trip for the first time and so we need to create a trip id)
+        if(self.activeTrip.tripID==-1){
+            //tripID = the trip's index in the tripList array
+            trip.tripID=[self.tripList count];
+            [self.tripList addObject:trip];
+            self.activeTrip.tripID=trip.tripID;
+        }else{
+            //If this trip already existed and was being edited, replace existing entry in the array
+            //(do not insert a new array element)
+            //Restore correct trip ID for the edited trip
+            trip.tripID=self.activeTrip.tripID;
+            [self.tripList replaceObjectAtIndex:(NSUInteger)self.activeTrip.tripID withObject:trip];
+        }
+        
+        
         [self.tableView reloadData];
     }
    

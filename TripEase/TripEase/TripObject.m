@@ -10,5 +10,15 @@
 
 @implementation TripObject
 
+//Constructor for TripObject
+-(id)init {
+    if(self=[super init]){
+        
+        //Set default (unassigned) value of tripID to -1
+        self.tripID=-1;
+    }
+    return self;
+}
+
 
 @end
