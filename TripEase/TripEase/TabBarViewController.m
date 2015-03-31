@@ -17,13 +17,13 @@
 @end
 
 @implementation TabBarViewController
-
+/*
 @synthesize existingTrip = _existingTrip;
 
 - (TripObject *)existingTrip {
     return _existingTrip;
 }
-
+*/
 
 
 //You need to pass a UIStoryboardSegue into viewDidLoad so that you can

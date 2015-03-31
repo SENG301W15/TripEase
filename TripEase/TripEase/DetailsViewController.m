@@ -48,6 +48,7 @@
     //    self.tripNameText.text=existingTripFromTab.tripDetails.tripName;
     // }
     
+    /////////////////////////////////////////////////////////////////////////////////////////////
     //PASSING DATA FROM TAB BAR VIEW CONTROLLER TO DETAILS VIEW CONTROLLER:
     //THE FOLLOWING LINES *WORK*, DO NOT DELETE!!!!
     
@@ -56,9 +57,31 @@
     
     //If the existing trip is not null, populate static fields on this screen with the values from existing trip
     if (temp.existingTrip!=nil) {
-        if (temp.existingTrip.tripDetails != nil) {
+        //Trip Name
+        if (temp.existingTrip.tripDetails.tripName != nil) {
             self.tripNameText.text = temp.existingTrip.tripDetails.tripName;
         }
+        
+        //Trip Location
+        if (temp.existingTrip.tripDetails.tripLocation !=nil){
+            self.tripLocationText.text = temp.existingTrip.tripDetails.tripLocation;
+        }
+        
+        //Start Date
+        if(temp.existingTrip.tripDetails.startDate !=nil){
+            self.startDateText.text = temp.existingTrip.tripDetails.startDate;
+        }
+        
+        //End Date
+        if(temp.existingTrip.tripDetails.endDate !=nil){
+            self.endDateText.text = temp.existingTrip.tripDetails.endDate;
+        }
+        
+        //Additional Details
+        if(temp.existingTrip.tripDetails.extraDetails !=nil){
+            self.extraDetailsText.text = temp.existingTrip.tripDetails.extraDetails;
+        }
+        
     }
     
    
