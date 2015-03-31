@@ -7,12 +7,15 @@
 //
 
 #import "TabBarViewController.h"
+#import "TripObject.h"
 
 @interface TabBarViewController ()
 
 @end
 
 @implementation TabBarViewController
+
+@synthesize existingTrip;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -23,6 +26,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 /*
 #pragma mark - Navigation

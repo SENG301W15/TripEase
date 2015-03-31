@@ -10,12 +10,13 @@
 #import "EditDetailsViewController.h"
 #import "DetailsObject.h"
 #import "HomeTableViewController.h"
+#import "TabBarViewController.h"
 #import "TripObject.h"
 
 
 
 @interface DetailsViewController ()
-
+/*
 @property (weak, nonatomic) IBOutlet UILabel *tripNameText;
 
 @property (weak, nonatomic) IBOutlet UILabel *tripLocationText;
@@ -23,14 +24,14 @@
 @property (weak, nonatomic) IBOutlet UILabel *endDateText;
 
 @property (weak, nonatomic) IBOutlet UITextView *extraDetailsText;
-
+*/
 
  
 @end
 
 @implementation DetailsViewController
 
-@synthesize existingTrip;
+//@synthesize existingTrip;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -45,9 +46,10 @@
     //If the details object in the existing TripObject passed in by the HomeTableController is not nil,
     //populate fields on this screen with the existing details fields
     
-    //DetailsObject *existingDetails = [[DetailsObject alloc]init];
-   
+    //UITabBarController *parent= self.tabBarController;
     
+   //UIViewController *temp = self.parentViewController;
+    //self.tripNameText=source.existingTrip.tripDetails.tripName;
     
     //existingDetails=HomeTableViewController.activeTrip.tripDetails;
     }

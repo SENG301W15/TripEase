@@ -12,14 +12,21 @@
 #import "TripObject.h"
 
 
-@interface DetailsViewController : UIViewController{
+@interface DetailsViewController : UIViewController/*{
     TripObject *existingTrip;
-}
+}*/
 
 @property DetailsObject *deets;
 
 @property (nonatomic) TripObject *existingTrip;
 
+@property (weak, nonatomic) IBOutlet UILabel *tripNameText;
+
+@property (weak, nonatomic) IBOutlet UILabel *tripLocationText;
+@property (weak, nonatomic) IBOutlet UILabel *startDateText;
+@property (weak, nonatomic) IBOutlet UILabel *endDateText;
+
+@property (weak, nonatomic) IBOutlet UITextView *extraDetailsText;
 
 
 - (IBAction)unwindToDetails:(UIStoryboardSegue *)segue;

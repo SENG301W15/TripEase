@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TripObject.h"
 
 @interface TabBarViewController : UITabBarController
+//{
+//    TripObject *existingTrip;
+//}
+
+@property (nonatomic) TripObject *existingTrip;
 
 @end

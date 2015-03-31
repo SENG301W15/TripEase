@@ -10,6 +10,7 @@
 #import "TripObject.h"
 #import "DetailsViewController.h"
 #import "DetailsObject.h"
+#import "TabBarViewController.h"
 
 @interface HomeTableViewController ()
 
@@ -35,7 +36,7 @@
     DetailsObject *details = source.deets;
     
     //TripObject *trip = [[TripObject alloc]init];
-
+    
     
     //If a new trip was saved, update table with the new entry and refresh view
     //Users are required to enter a trip name in order to save a trip,
@@ -70,18 +71,24 @@
     //Otherwise, an existing trip will have been stored into activeTrip when the user selects a row
     //and didSelectRowAtIndexPath is called
     
+    //DetailsViewController *dest = [[DetailsViewController alloc]init];
+    //dest.tripNameText.text=self.activeTrip.tripDetails.tripName;
+    
+    
+    //UINavigationController *navController = (UINavigationController *)segue.destinationViewController;
+    TabBarViewController *tabviewctrl = (TabBarViewController *)segue.destinationViewController;
+    tabviewctrl.existingTrip=self.activeTrip;
+    
+    
+    
+    
+    
+
+    
+    
     
     //if([[segue identifier] isEqualToString:@"segueFromCell"]){
     
-    
-    // THESE LINES ARE CAUSING THE CRASH
-        //Get reference to destination view controller i.e. DetailsViewController
-        //DetailsViewController *vc = [segue destinationViewController];
-        //Pass the active TripObject to the DetailsViewController
-        //[vc setExistingTrip:self.activeTrip];
-    
-     //}
-   
     
 }
 

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "TripObject.h"
+#import "TabBarViewController.h"
 
 @interface HomeTableViewController : UITableViewController
 - (IBAction)unwindToHome:(UIStoryboardSegue *)segue;
