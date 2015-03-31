@@ -16,7 +16,7 @@
 
 @property NSMutableArray *tripList;
 
-@property TripObject *trip;
+//@property TripObject *trip;
 
 @property (weak, nonatomic) IBOutlet UINavigationItem *nwTripButton;
 
@@ -35,15 +35,15 @@
     //Recover the item that was added by the user, if any
     DetailsObject *details = source.deets;
     
-    //TripObject *trip = [[TripObject alloc]init];
+    TripObject *trip = [[TripObject alloc]init];
     
     
     //If a new trip was saved, update table with the new entry and refresh view
     //Users are required to enter a trip name in order to save a trip,
     //therefore it's sufficient to check for trip name being nil
     if(details.tripName!=nil){
-        self.activeTrip.tripDetails=details;
-        [self.tripList addObject:self.activeTrip];
+        trip.tripDetails=details;
+        [self.tripList addObject:trip];
         [self.tableView reloadData];
     }
    

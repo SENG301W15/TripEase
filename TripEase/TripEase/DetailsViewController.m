@@ -10,7 +10,7 @@
 #import "EditDetailsViewController.h"
 #import "DetailsObject.h"
 #import "HomeTableViewController.h"
-#import "TabBarViewController.h"
+//#import "TabBarViewController.h"
 #import "TripObject.h"
 
 
@@ -24,14 +24,14 @@
 @property (weak, nonatomic) IBOutlet UILabel *endDateText;
 
 @property (weak, nonatomic) IBOutlet UITextView *extraDetailsText;
-*/
 
+*/
  
 @end
 
 @implementation DetailsViewController
 
-//@synthesize existingTrip;
+@synthesize existingTripFromTab;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -42,16 +42,26 @@
     self.extraDetailsText.layer.cornerRadius=7;
     self.extraDetailsText.layer.borderColor=[[[UIColor grayColor] colorWithAlphaComponent:0.2]CGColor];
     
-    //IS THIS THE CORRECT PLACE TO PUT THIS LOGIC????
     //If the details object in the existing TripObject passed in by the HomeTableController is not nil,
     //populate fields on this screen with the existing details fields
+    //if(existingTripFromTab.tripDetails.tripName!=nil){
+    //    self.tripNameText.text=existingTripFromTab.tripDetails.tripName;
+    // }
     
-    //UITabBarController *parent= self.tabBarController;
+    //PASSING DATA FROM TAB BAR VIEW CONTROLLER TO DETAILS VIEW CONTROLLER:
+    //THE FOLLOWING LINES *WORK*, DO NOT DELETE!!!!
     
-   //UIViewController *temp = self.parentViewController;
-    //self.tripNameText=source.existingTrip.tripDetails.tripName;
+    //get a reference to the tabBarController that controls this tab bar item (the details tab)
+    TabBarViewController *temp = (TabBarViewController *)[self tabBarController];
     
-    //existingDetails=HomeTableViewController.activeTrip.tripDetails;
+    //If the existing trip is not null, populate static fields on this screen with the values from existing trip
+    if (temp.existingTrip!=nil) {
+        if (temp.existingTrip.tripDetails != nil) {
+            self.tripNameText.text = temp.existingTrip.tripDetails.tripName;
+        }
+    }
+    
+   
     }
 
 - (void)didReceiveMemoryWarning {

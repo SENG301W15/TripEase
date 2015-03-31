@@ -12,13 +12,13 @@
 #import "TripObject.h"
 
 
-@interface DetailsViewController : UIViewController/*{
-    TripObject *existingTrip;
+@interface DetailsViewController : UIViewController; /*{
+    TripObject *existingTripFromTab;
 }*/
 
 @property DetailsObject *deets;
 
-@property (nonatomic) TripObject *existingTrip;
+@property (nonatomic) TripObject *existingTripFromTab;
 
 @property (weak, nonatomic) IBOutlet UILabel *tripNameText;
 
