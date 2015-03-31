@@ -31,6 +31,7 @@
 
 @implementation DetailsViewController
 
+//Get value of existing trip passed in from Tab View Controller
 @synthesize existingTripFromTab;
 
 - (void)viewDidLoad {

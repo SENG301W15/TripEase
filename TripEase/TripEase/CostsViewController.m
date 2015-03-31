@@ -7,12 +7,20 @@
 //
 
 #import "CostsViewController.h"
+#import "EditCostsViewController.h"
+#import "CostObject.h"
+#import "HomeTableViewController.h"
+#import "TripObject.h"
+
 
 @interface CostsViewController ()
 
 @end
 
 @implementation CostsViewController
+
+//Get value of existing trip passed in from Tab View Controller
+//@synthesize existingTripFromTab;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -22,6 +30,9 @@
     self.paymentNotesTextView.layer.borderWidth=1.0;
     self.paymentNotesTextView.layer.cornerRadius=7;
     self.paymentNotesTextView.layer.borderColor=[[[UIColor grayColor] colorWithAlphaComponent:0.2]CGColor];
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

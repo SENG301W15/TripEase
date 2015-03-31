@@ -10,4 +10,12 @@
 
 @interface CostObject : NSObject
 
+@property NSDecimalNumber *totalCost;
+@property NSDecimalNumber *indivCost;
+@property NSString *payee;
+@property NSString *paymentDetails;
+
+
+
+
 @end

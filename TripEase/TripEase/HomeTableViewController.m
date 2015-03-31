@@ -29,7 +29,31 @@
     
     //Get the source view controller of the previous scene
 
-    
+/*
+ *   ATTENTION NEEDED HERE:
+ *   Currently, the only unwind case implemented is the case where we unwind to home from the Details view.
+ *   For all cases to work,
+ *   We need to check which tab the 'home' button is pressed on
+ *   Since each tab is a different type of ViewController, the type of view controller that we assign to
+ *   source will depend on which tab we're unwinding from
+ *
+ *   so something like this: (idk about exact obj c syntax)
+ *          
+ *           ViewController *source = [segue sourceViewController];
+ *           if(source.isType(DetailsViewController)){
+ *               //cast as a DetailsViewContorller
+ *               DetailsViewController *dsource = (DetailsViewController *)source;
+ *           }else if(source.isType(CostsViewController)){
+ *               //cast as a CostsViewController
+ *               CostsViewController *csource = (CostsViewController *)source;
+ *           } etc...
+ *
+ *   }
+ *
+ *
+ *  (Currently, because this type detection and casting isn't implemented, we get an exception when you return
+ *   home from any tab other than details)
+ */
     DetailsViewController *source = [segue sourceViewController];
     
     //Recover the item that was added by the user, if any
