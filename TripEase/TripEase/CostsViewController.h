@@ -10,5 +10,8 @@
 
 @interface CostsViewController : UIViewController
 - (IBAction)unwindToCosts:(UIStoryboardSegue *)segue;
+@property (weak, nonatomic) IBOutlet UILabel *costsLabel;
+@property (weak, nonatomic) IBOutlet UILabel *payeeLabel;
+@property (weak, nonatomic) IBOutlet UITextView *paymentNotesTextView;
 
 @end

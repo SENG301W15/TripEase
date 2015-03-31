@@ -17,6 +17,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    //Apply border around the "Payment Details" text field
+    self.paymentNotesTextView.layer.borderWidth=1.0;
+    self.paymentNotesTextView.layer.cornerRadius=7;
+    self.paymentNotesTextView.layer.borderColor=[[[UIColor grayColor] colorWithAlphaComponent:0.2]CGColor];
 }
 
 - (void)didReceiveMemoryWarning {
