@@ -9,6 +9,7 @@
 
 #import "EditDetailsViewController.h"
 #import "DetailsObject.h"
+#import "DetailsViewController.h"
 
 @interface EditDetailsViewController ()
 
@@ -41,6 +42,32 @@
     self.detailTextView.layer.borderWidth=1.0;
     self.detailTextView.layer.cornerRadius=7;
     self.detailTextView.layer.borderColor=[[[UIColor grayColor] colorWithAlphaComponent:0.2]CGColor];
+    
+    
+    //If editing an existing trip, populate fields with existing trip details
+    if(self.existingDetails!=nil){
+        //TripName
+        if(self.existingDetails.tripName!=nil){
+            self.tripNameTextField.text=self.existingDetails.tripName;
+        }
+        //Trip Location
+        if(self.existingDetails.tripLocation!=nil){
+            self.locationTextField.text=self.existingDetails.tripLocation;
+        }
+        //Start Date
+        if(self.existingDetails.startDate!=nil){
+            self.startDateTextField.text=self.existingDetails.startDate;
+        }
+        //End Date
+        if(self.existingDetails.endDate!=nil){
+            self.endDateTextField.text=self.existingDetails.endDate;
+        }
+        //Additional Details
+        if(self.existingDetails.extraDetails!=nil){
+            self.detailTextView.text=self.existingDetails.extraDetails;
+        }
+    }
+    
     
     //Display date picker wheel when user taps start date text box
     UIDatePicker *startDatePicker = [[UIDatePicker alloc]init];

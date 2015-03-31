@@ -118,7 +118,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="1oi-ge-eEH">
                             <connections>
-                                <segue destination="EO0-Le-N5n" kind="presentation" id="vo4-Js-EER"/>
+                                <segue destination="EO0-Le-N5n" kind="presentation" identifier="detailsToEditDetailsSegue" id="vo4-Js-EER"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

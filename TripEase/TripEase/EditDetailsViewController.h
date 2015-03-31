@@ -16,5 +16,7 @@
 
 @property DetailsObject *details;
 
+@property DetailsObject *existingDetails;
+
 @end
 

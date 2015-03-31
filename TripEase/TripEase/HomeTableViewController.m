@@ -71,23 +71,13 @@
     //Otherwise, an existing trip will have been stored into activeTrip when the user selects a row
     //and didSelectRowAtIndexPath is called
     
-    //DetailsViewController *dest = [[DetailsViewController alloc]init];
-    //dest.tripNameText.text=self.activeTrip.tripDetails.tripName;
     
-    
-    //UINavigationController *navController = (UINavigationController *)segue.destinationViewController;
+    //Point the existingTrip object from the destination view controller (i.e. Tab Bar controller) to the same location as the current activeTrip TripObject
     TabBarViewController *tabviewctrl = (TabBarViewController *)segue.destinationViewController;
     tabviewctrl.existingTrip=self.activeTrip;
     
     
     
-    
-    
-
-    
-    
-    
-    //if([[segue identifier] isEqualToString:@"segueFromCell"]){
     
     
 }

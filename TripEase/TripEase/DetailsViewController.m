@@ -57,6 +57,8 @@
     
     //If the existing trip is not null, populate static fields on this screen with the values from existing trip
     if (temp.existingTrip!=nil) {
+        self.existingTripFromTab = temp.existingTrip;
+        
         //Trip Name
         if (temp.existingTrip.tripDetails.tripName != nil) {
             self.tripNameText.text = temp.existingTrip.tripDetails.tripName;
@@ -134,15 +136,15 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     
-    //Prepare fields of global deets to send up to Home screen upon unwind
-    /*
-    self.deets = [[DetailsObject alloc]init];
-    self.deets.tripName=self.tripNameText.text;
-    self.deets.tripLocation=self.tripLocationText.text;
-    self.deets.startDate=self.startDateText.text;
-    self.deets.endDate=self.endDateText.text;
-    self.deets.extraDetails=self.extraDetailsText.text;
-    */
+    //If segueing from Details screen to EditDetails screen, need to populate EditDetails fields with existing trip data if available
+    if([segue.identifier isEqualToString:@"detailsToEditDetailsSegue"]){
+        //Get refernce to EditDetailsViewController
+        UINavigationController *navctrl = (UINavigationController *)segue.destinationViewController;
+        EditDetailsViewController *dvc = (EditDetailsViewController *)navctrl.topViewController;
+    
+        //Point existingDetails DetailsObject in EditDetails field to DetailsObject from existinTripDetails TripObject in this view
+        dvc.existingDetails=self.existingTripFromTab.tripDetails;
+    }
 }
 
 
