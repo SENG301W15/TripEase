@@ -18,6 +18,38 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    //Print home directory to console
+    NSLog(@"HOME > %@", NSHomeDirectory());
+    
+    //Print documents directory to console
+    NSArray *directories = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documents = [directories firstObject];
+    NSLog(@"DOCUMENTS > %@", documents);
+    
+    /*
+     //Save data
+     NSUserDefaults *savedTrips = [NSUserDefaults standardUserDefaults];
+     NSData *data = [NSKeyedArchiver archivedDataWithRootObject:self.tripList];
+     [savedTrips setObject:data forKey:@"savedTrips"];
+     [savedTrips synchronize];*/
+    
+    //Test code
+    NSArray *fruits = @[@"Apple", @"Mango", @"Pineapple", @"Plum", @"Apricot"];
+    
+    NSString *filePathFruits = [documents stringByAppendingPathComponent:@"fruits.plist"];
+    [fruits writeToFile:filePathFruits atomically:YES];
+    
+    NSDictionary *miscDictionary = @{@"anArray" : fruits, @"aNumber" : @12345, @"aBoolean" : @YES};
+    
+    NSString *filePathDictionary = [documents stringByAppendingPathComponent:@"misc-dictionary.plist"];
+    [miscDictionary writeToFile:filePathDictionary atomically:YES];
+    
+    NSArray *loadedFruits = [NSArray arrayWithContentsOfFile:filePathFruits];
+    NSLog(@"Fruits Array > %@", loadedFruits);
+    
+    NSDictionary *loadedMiscDictionary = [NSDictionary dictionaryWithContentsOfFile:filePathDictionary];
+    NSLog(@"Misc Dictionary > %@", loadedMiscDictionary);
+    
     return YES;
 }
 
@@ -37,6 +69,7 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {

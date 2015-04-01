@@ -10,4 +10,14 @@
 
 @implementation InvitesObject
 
+//Constructor for InvitesObject
+-(id)init {
+    if(self=[super init]){
+        
+        //Set default (unassigned) value of numAttendees to 1
+        self.numAttendees=1;
+    }
+    return self;
+}
+
 @end

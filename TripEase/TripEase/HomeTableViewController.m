@@ -11,6 +11,8 @@
 #import "DetailsViewController.h"
 #import "DetailsObject.h"
 #import "TabBarViewController.h"
+#import "CostsViewController.h"
+
 
 @interface HomeTableViewController ()
 
@@ -25,7 +27,6 @@
 @implementation HomeTableViewController
 
 - (IBAction)unwindToHome:(UIStoryboardSegue *)segue {
-    
     
     //Get the source view controller of the previous scene
 
@@ -54,10 +55,21 @@
  *  (Currently, because this type detection and casting isn't implemented, we get an exception when you return
  *   home from any tab other than details)
  */
-    DetailsViewController *source = [segue sourceViewController];
+    
+    UIViewController *source =[segue sourceViewController];
+    DetailsViewController *legitSource;
+    
+    
+    if([source isKindOfClass:[DetailsViewController class]]){
+        legitSource=(DetailsViewController *)source;
+    }//else if([source isKindOfClass:[CostsViewController class]]){
+      //  legitSource=(CostsViewController *)source;
+    //}
+    
+    //DetailsViewController *source = [segue sourceViewController];
     
     //Recover the item that was added by the user, if any
-    DetailsObject *details = source.deets;
+    //DetailsObject *details = legitSource.deets;
     
     TripObject *trip = [[TripObject alloc]init];
     
@@ -65,8 +77,11 @@
     //If a new trip was saved, update table with the new entry and refresh view
     //Users are required to enter a trip name in order to save a trip,
     //therefore it's sufficient to check for trip name being nil
-    if(details.tripName!=nil){
-        trip.tripDetails=details;
+    if(self.activeTrip.tripDetails.tripName!=nil){
+        //trip.tripDetails=details;
+      
+        //Recover the info added/modified by the user
+        trip=self.activeTrip;
         
         //Check whether a tripID has already been set for the active trip - create one if not
         //(tripID==-1 indiactes that we are saving this trip for the first time and so we need to create a trip id)
@@ -86,6 +101,7 @@
         
         [self.tableView reloadData];
     }
+
    
 }
 

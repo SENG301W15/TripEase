@@ -15,6 +15,9 @@
 
 @interface CostsViewController ()
 
+
+@property CostObject *costs;
+
 @end
 
 @implementation CostsViewController
@@ -31,6 +34,44 @@
     self.paymentNotesTextView.layer.cornerRadius=7;
     self.paymentNotesTextView.layer.borderColor=[[[UIColor grayColor] colorWithAlphaComponent:0.2]CGColor];
     
+    //If the existing trip not null, pop static fields
+    /*SAFETY COMMENT BEGINS HERE
+    
+    //get reference to tabBarController
+    TabBarViewController *temp = (TabBarViewController *)[self tabBarController];
+    
+    //check if nil
+    if(temp.existingTrip!=nil){
+        //Shared Cost
+        //(NSDecimalDivide((NSDecimal *)self.costsLabel, self.existingTrip.tripCost,(NSDecimal *)self.existingTrip.invitesObject.numAttendees))
+        //self.costsLabel.text=temp.existingTrip.tripCost.totalCost/(NSDecimal *)temp.existingTrip.invitesObject.numAttendees;
+    
+        
+        if(temp.existingTrip.tripCost.totalCost!=0){
+        NSDecimal *tempDec=(NSDecimal *)self.existingTripFromTab.tripInvites.numAttendees;
+        self.costsLabel.text=(NSString *)[self.existingTripFromTab.tripCost.totalCost decimalNumberByDividingBy:(__bridge NSDecimalNumber *)tempDec];
+        }
+        
+        
+        //self.costsLabel.text=(NSString *)[temp.existingTrip.tripCost.totalCost decimalNumberByDividingBy:(NSDecimalNumber *)temp.existingTrip.invitesObject.numAttendees];
+    
+        
+        //Payee
+        if(temp.existingTrip.tripCost.payee!=nil){
+            self.payeeLabel.text=temp.existingTrip.tripCost.payee;
+        }
+        
+        //Notes
+        if(temp.existingTrip.tripCost.paymentDetails!=nil){
+            self.paymentNotesTextView.text=temp.existingTrip.tripCost.paymentDetails;
+        }
+     
+        
+        
+    }
+
+  */
+    
     
     
 }
@@ -43,20 +84,15 @@
 
 - (IBAction)unwindToCosts:(UIStoryboardSegue *)segue {
     
-    //Get the source view controller of the previous scene
-    //EditDetailsViewController *source = [segue sourceViewController];
+    //Get source view controller of prev scence
+    //EditCostsViewController *source = [segue sourceViewController];
     
-    /*
-     //Recover the item that was added by the user, if any
-     PackingListItem *item = source.packingListItem;
-     
-     //If item exists (i.e. if user entered any text), add item to the table and reload the view to display this
-     if (item != nil) {
-     [self.packingListItems addObject:item];
-     [self.tableView reloadData];
-     }
-     
-     */
+    //Retreive entered info
+    //self.costs=source.costs;
+    
+    //If new costs were inputted in the edit screen, update appropriate static fields on
+    
+    
 }
 
 #pragma mark - Navigation

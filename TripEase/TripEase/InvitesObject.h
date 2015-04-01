@@ -10,4 +10,6 @@
 
 @interface InvitesObject : NSObject
 
+@property NSInteger numAttendees;
+
 @end

@@ -17,8 +17,8 @@
 @property NSInteger tripID; //A new unique ID will be created for each trip upon instantiation
 @property DetailsObject *tripDetails;
 @property CostObject *tripCost;
-@property PackingObject *packingObject;
-@property InvitesObject *invitesObject;
+@property PackingObject *tripPacking;
+@property InvitesObject *tripInvites;
 
 
 

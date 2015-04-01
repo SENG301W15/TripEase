@@ -292,19 +292,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are the Trip Organizer!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U1z-Fz-HxF" userLabel="UserIDLabel">
-                                <rect key="frame" x="16" y="72" width="568" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="You Owe:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="16E-xR-EVM">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="You Owe:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="16E-xR-EVM">
                                 <rect key="frame" x="16" y="126" width="86" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="To:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vC1-6S-2gq">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="To:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vC1-6S-2gq">
                                 <rect key="frame" x="16" y="180" width="86" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -328,21 +322,26 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You Are The Trip Organizer!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vgv-mU-g0E">
+                                <rect key="frame" x="16" y="72" width="568" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="1eX-Er-ihL" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="6gi-9w-HTX"/>
-                            <constraint firstItem="16E-xR-EVM" firstAttribute="top" secondItem="U1z-Fz-HxF" secondAttribute="bottom" constant="33" id="8El-pE-kNu"/>
+                            <constraint firstItem="vgv-mU-g0E" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="8" id="B5I-oH-fbn"/>
                             <constraint firstItem="vC1-6S-2gq" firstAttribute="top" secondItem="16E-xR-EVM" secondAttribute="bottom" constant="33" id="FkM-5N-ak9"/>
-                            <constraint firstItem="U1z-Fz-HxF" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="8" id="OQZ-ok-KXk"/>
                             <constraint firstItem="1eX-Er-ihL" firstAttribute="trailing" secondItem="QS5-Rx-YEW" secondAttribute="trailingMargin" id="Qh7-tZ-nPd"/>
+                            <constraint firstItem="vgv-mU-g0E" firstAttribute="trailing" secondItem="QS5-Rx-YEW" secondAttribute="trailingMargin" id="TdE-cH-T0k"/>
                             <constraint firstItem="STo-zp-F7i" firstAttribute="top" secondItem="rxi-Np-xOM" secondAttribute="bottom" constant="33" id="Veq-zW-QNU"/>
-                            <constraint firstItem="U1z-Fz-HxF" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="WoP-2l-mBj"/>
                             <constraint firstItem="rxi-Np-xOM" firstAttribute="leading" secondItem="16E-xR-EVM" secondAttribute="trailing" constant="8" id="aUY-yx-f0J"/>
-                            <constraint firstItem="U1z-Fz-HxF" firstAttribute="trailing" secondItem="QS5-Rx-YEW" secondAttribute="trailingMargin" id="fMO-T4-CMw"/>
+                            <constraint firstItem="vgv-mU-g0E" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="fWE-zN-rB8"/>
                             <constraint firstItem="16E-xR-EVM" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="hwr-6h-kTe"/>
-                            <constraint firstItem="rxi-Np-xOM" firstAttribute="top" secondItem="U1z-Fz-HxF" secondAttribute="bottom" constant="33" id="pfq-9c-MDy"/>
                             <constraint firstItem="1eX-Er-ihL" firstAttribute="top" secondItem="STo-zp-F7i" secondAttribute="bottom" constant="33" id="sID-QK-nLI"/>
+                            <constraint firstItem="rxi-Np-xOM" firstAttribute="top" secondItem="vgv-mU-g0E" secondAttribute="bottom" constant="33" id="uqT-fv-zns"/>
                             <constraint firstItem="vC1-6S-2gq" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="v41-8W-7ho"/>
                             <constraint firstItem="STo-zp-F7i" firstAttribute="leading" secondItem="vC1-6S-2gq" secondAttribute="trailing" constant="8" id="xQ3-tG-bRX"/>
                         </constraints>
@@ -360,9 +359,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="costsLabel" destination="rxi-Np-xOM" id="FLQ-Dv-cye"/>
-                        <outlet property="payeeLabel" destination="STo-zp-F7i" id="hWo-k8-yQM"/>
-                        <outlet property="paymentNotesTextView" destination="1eX-Er-ihL" id="DUS-T3-eKU"/>
+                        <outlet property="costsLabel" destination="rxi-Np-xOM" id="lsE-DB-b0h"/>
+                        <outlet property="payeeLabel" destination="STo-zp-F7i" id="N4y-2s-2BD"/>
+                        <outlet property="paymentNotesTextView" destination="1eX-Er-ihL" id="oDC-Id-Afo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>

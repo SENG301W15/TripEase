@@ -10,4 +10,14 @@
 
 @implementation CostObject
 
+//Constructor for CostObject
+-(id)init {
+    if(self=[super init]){
+        
+        //Set default cost to 0 dollars
+        self.totalCost=0;
+    }
+    return self;
+}
+
 @end

@@ -129,6 +129,9 @@
         
     }
     
+    //Update value of details object in TripObject pointer
+    self.existingTripFromTab.tripDetails=self.deets;
+    
     
 }
 
