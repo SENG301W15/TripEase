@@ -80,6 +80,7 @@
         //the same location as the existingTrip array
         [self.existingTripFromTab.tripInvites.inviteeList addObject:item];
         [self.tableView reloadData];
+        self.existingTripFromTab.tripInvites.numAttendees = [self.existingTripFromTab.tripInvites.inviteeList count];
     }
     
 }
