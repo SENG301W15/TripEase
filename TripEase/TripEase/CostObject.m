@@ -15,7 +15,8 @@
     if(self=[super init]){
         
         //Set default cost to 0 dollars
-        self.totalCost=0;
+        //self.totalCost=0;
+        self.totalCost = [[NSDecimalNumber alloc]initWithInt:0];
     }
     return self;
 }
