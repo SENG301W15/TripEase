@@ -8,6 +8,8 @@
 
 #import "EditCostsViewController.h"
 #import "CostObject.h"
+#import "TabBarViewController.h"
+#import "CostsViewController.h"
 
 @interface EditCostsViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *totalCostInput;
@@ -52,5 +54,13 @@
         self.costs.paymentDetails=self.costsNotesInput.text;
     }    
 }
+
+
+
+
+- (IBAction)saveButton:(id)sender {
+}
+
+
 
 @end

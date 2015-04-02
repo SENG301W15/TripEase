@@ -10,6 +10,7 @@
 #import "EditDetailsViewController.h"
 #import "DetailsObject.h"
 #import "DetailsViewController.h"
+#import "TabBarViewController.h"
 
 @interface EditDetailsViewController ()
 
@@ -126,29 +127,8 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-- (IBAction)buttonPressed {
-    self.predictionLabel.text = @"YES";
-}
-*/
 
 
-
-//We want to enforce that the user MUST enter at least a trip name before saving.
-//This alert pops up if the user attempts to save without first entering a trip name
-- (void) showNoTitleAlert{
-    //Define the alert window
-    UIAlertView *noTitleAlert = [[UIAlertView alloc]
-                                 initWithTitle:@"Oops!"
-                                 message:@"You must enter a Trip Name before saving!"
-                                 delegate:nil
-                                 cancelButtonTitle:@"Ok"
-                                 otherButtonTitles:nil
-                                 ];
-    //display the alert
-    [noTitleAlert show];
-    //[noTitleAlert release];
-}
 
 #pragma mark - Navigation
 
@@ -197,7 +177,7 @@
         self.details.endDate=self.endDateTextField.text;
     }
     
-    //If extra details were netered, save
+    //If extra details were entered, save
     if(self.detailTextView.text.length>0){
         self.details.extraDetails=self.detailTextView.text;
     }
@@ -206,6 +186,7 @@
     
 }
 
+//Check whether user entered a trip name - only permit segue if they did
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender{
     if(sender==self.saveButton){
     //if([identifier isEqualToString:@"unwindToDetails"]){
@@ -218,6 +199,23 @@
         
     }
     return YES;
+}
+
+//We want to enforce that the user MUST enter at least a trip name before saving.
+//This alert pops up if the user attempts to save without first entering a trip name
+- (void) showNoTitleAlert{
+    //Define the alert window
+    UIAlertView *noTitleAlert = [[UIAlertView alloc]
+                                 initWithTitle:@"Oops!"
+                                 message:@"You must enter a Trip Name before saving!"
+                                 delegate:nil
+                                 cancelButtonTitle:@"Ok"
+                                 otherButtonTitles:nil
+                                 ];
+    //display the alert
+    [noTitleAlert show];
+    
+    //[noTitleAlert release];
 }
 
 - (IBAction)saveButtonAction:(id)sender {

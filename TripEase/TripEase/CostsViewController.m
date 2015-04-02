@@ -18,6 +18,8 @@
 
 @property CostObject *costs;
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *homeButton;
+
 @end
 
 @implementation CostsViewController
@@ -143,23 +145,55 @@
     // Pass the selected object to the new view controller.
     
     
-    //Check whether entered item should be saved
-    
-    /*
-     //If save button not tapped, do nothing an return
-     if (sender != self.saveButton) return;
-     
-     //If reached this line - save button was tapped
-     //If any text was entered do the following:
-     if (self.textField.text.length > 0) {
-     self.PackingListItem = [[PackingListItem alloc] init];  //add new PackingListItem to array
-     self.packingListItem.itemName = self.textField.text;    //name of new item = text user entered
-     self.packingListItem.completed = NO;                           //Initially item is not completed
-     }
-     */
+   
     
 }
 
+
+//Only permit user to return to home if a trip name has been entereed
+//Check whether a trip name exists
+//If it does, return YES
+//If it does not, return NO and pop up an error message
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender{
+    if(sender==self.homeButton){
+        //Only permit save if at least a trip name was entered
+        //- if trip name not entered, display alert and do not segue
+        
+        //Get a reference to the source view controller
+        TabBarViewController *tvc = (TabBarViewController *)[self tabBarController];
+        
+        //if there is no trip name,
+        if(tvc.existingTrip.tripDetails.tripName==nil){
+            //pop up error message, do not permit segue
+            [self showNoTitleAlert];
+            return NO;
+        }
+        
+        
+    }
+    //Otherwise, permit segue to Home
+    return YES;
+}
+
+
+
+
+//We want to enforce that the user MUST enter at least a trip name before saving.
+//This alert pops up if the user attempts to save without first entering a trip name
+- (void) showNoTitleAlert{
+    //Define the alert window
+    UIAlertView *noTitleAlert = [[UIAlertView alloc]
+                                 initWithTitle:@"Oops!"
+                                 message:@"You must enter a Trip Name before saving!\n\n Name your trip in the Details Tab."
+                                 delegate:nil
+                                 cancelButtonTitle:@"Ok"
+                                 otherButtonTitles:nil
+                                 ];
+    //display the alert
+    [noTitleAlert show];
+    
+    //[noTitleAlert release];
+}
 
 /*
 #pragma mark - Navigation
@@ -170,5 +204,8 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)homeButtonAction:(id)sender {
+}
 
 @end

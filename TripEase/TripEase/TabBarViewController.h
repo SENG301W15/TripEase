@@ -13,6 +13,9 @@
     TripObject *_existingTrip;
 }*/
 
+
+
+
 @property (nonatomic) TripObject *existingTrip;
 
 

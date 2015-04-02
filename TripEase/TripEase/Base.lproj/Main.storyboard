@@ -349,6 +349,7 @@
                     <navigationItem key="navigationItem" title="Costs" id="xmT-HV-ldU">
                         <barButtonItem key="leftBarButtonItem" title="Home" id="z6T-lH-avx">
                             <connections>
+                                <action selector="homeButton:" destination="8rJ-Kc-sve" id="EzL-eR-92i"/>
                                 <segue destination="Wh2-PY-gcP" kind="unwind" unwindAction="unwindToHome:" id="Aui-wE-rvm"/>
                             </connections>
                         </barButtonItem>
@@ -360,6 +361,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="costsLabel" destination="rxi-Np-xOM" id="lsE-DB-b0h"/>
+                        <outlet property="homeButton" destination="z6T-lH-avx" id="7nV-Rn-KPZ"/>
                         <outlet property="payeeLabel" destination="STo-zp-F7i" id="N4y-2s-2BD"/>
                         <outlet property="paymentNotesTextView" destination="1eX-Er-ihL" id="oDC-Id-Afo"/>
                     </connections>
@@ -1127,6 +1129,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="quc-5X-bHF">
                             <connections>
+                                <action selector="saveButton:" destination="YtP-rh-qkl" id="PGz-gb-tDB"/>
                                 <segue destination="3gp-b8-Eew" kind="unwind" unwindAction="unwindToCosts:" id="ey1-ci-UEd"/>
                             </connections>
                         </barButtonItem>
