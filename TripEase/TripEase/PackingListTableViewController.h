@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TripObject.h"
 
 @interface PackingListTableViewController : UITableViewController
 - (IBAction)unwindToList:(UIStoryboardSegue *)segue;
+
+@property (nonatomic) TripObject *existingTripFromTab;
+
 @end

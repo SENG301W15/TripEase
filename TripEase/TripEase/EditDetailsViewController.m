@@ -1,6 +1,6 @@
 
 //
-//  FirstViewController.m
+//  EditDetailsViewController.m
 //  TripEase
 //
 //  Created by David Patterson on 2015-02-17.

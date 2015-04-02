@@ -34,43 +34,62 @@
     self.paymentNotesTextView.layer.cornerRadius=7;
     self.paymentNotesTextView.layer.borderColor=[[[UIColor grayColor] colorWithAlphaComponent:0.2]CGColor];
     
-    //If the existing trip not null, pop static fields
-    /*SAFETY COMMENT BEGINS HERE
     
-    //get reference to tabBarController
+    //THE FOLLOWING LINES *WORK*, DO NOT DELETE!!!!
+    
+    //get a reference to the tabBarController that controls this tab bar item (the details tab)
     TabBarViewController *temp = (TabBarViewController *)[self tabBarController];
     
-    //check if nil
-    if(temp.existingTrip!=nil){
-        //Shared Cost
-        //(NSDecimalDivide((NSDecimal *)self.costsLabel, self.existingTrip.tripCost,(NSDecimal *)self.existingTrip.invitesObject.numAttendees))
-        //self.costsLabel.text=temp.existingTrip.tripCost.totalCost/(NSDecimal *)temp.existingTrip.invitesObject.numAttendees;
-    
+    //If the existing trip is not null, populate static fields on this screen with the values from existing trip
+    if (temp.existingTrip!=nil) {
+        self.existingTripFromTab = temp.existingTrip;
         
-        if(temp.existingTrip.tripCost.totalCost!=0){
-        NSDecimal *tempDec=(NSDecimal *)self.existingTripFromTab.tripInvites.numAttendees;
-        self.costsLabel.text=(NSString *)[self.existingTripFromTab.tripCost.totalCost decimalNumberByDividingBy:(__bridge NSDecimalNumber *)tempDec];
+        if (temp.existingTrip.tripCost.totalCost != nil) {
+            NSString *attendeesString = [NSString stringWithFormat:@"%ld", (long)self.existingTripFromTab.tripInvites.numAttendees];
+            NSDecimalNumber *attendeesDecimal = [NSDecimalNumber decimalNumberWithString:attendeesString];
+            NSDecimalNumber *temp=[self.existingTripFromTab.tripCost.totalCost decimalNumberByDividingBy:attendeesDecimal];
+            NSString *temp2 = [NSString stringWithFormat:@"%@", temp];
+            self.costsLabel.text=temp2;
         }
         
-        
-        //self.costsLabel.text=(NSString *)[temp.existingTrip.tripCost.totalCost decimalNumberByDividingBy:(NSDecimalNumber *)temp.existingTrip.invitesObject.numAttendees];
-    
-        
-        //Payee
-        if(temp.existingTrip.tripCost.payee!=nil){
-            self.payeeLabel.text=temp.existingTrip.tripCost.payee;
+        if (temp.existingTrip.tripCost.payee != nil) {
+            self.payeeLabel.text = temp.existingTrip.tripCost.payee;
         }
         
-        //Notes
-        if(temp.existingTrip.tripCost.paymentDetails!=nil){
-            self.paymentNotesTextView.text=temp.existingTrip.tripCost.paymentDetails;
+        if (temp.existingTrip.tripCost.paymentDetails != nil) {
+            self.paymentNotesTextView.text = temp.existingTrip.tripCost.paymentDetails;
         }
-     
         
+        /*
+        //Trip Name
+        if (temp.existingTrip.tripDetails.tripName != nil) {
+            self.tripNameText.text = temp.existingTrip.tripDetails.tripName;
+        }
+        
+        //Trip Location
+        if (temp.existingTrip.tripDetails.tripLocation !=nil){
+            self.tripLocationText.text = temp.existingTrip.tripDetails.tripLocation;
+        }
+        
+        //Start Date
+        if(temp.existingTrip.tripDetails.startDate !=nil){
+            self.startDateText.text = temp.existingTrip.tripDetails.startDate;
+        }
+        
+        //End Date
+        if(temp.existingTrip.tripDetails.endDate !=nil){
+            self.endDateText.text = temp.existingTrip.tripDetails.endDate;
+        }
+        
+        //Additional Details
+        if(temp.existingTrip.tripDetails.extraDetails !=nil){
+            self.extraDetailsText.text = temp.existingTrip.tripDetails.extraDetails;
+        }
+         
+         */
         
     }
-
-  */
+    
     
     
     
@@ -84,13 +103,34 @@
 
 - (IBAction)unwindToCosts:(UIStoryboardSegue *)segue {
     
-    //Get source view controller of prev scence
-    //EditCostsViewController *source = [segue sourceViewController];
+    //Get the source view controller of the previous scene
+    EditCostsViewController *source = [segue sourceViewController];
     
-    //Retreive entered info
-    //self.costs=source.costs;
+    //Retrieve the CostObject from the EditCostsViewController
+    self.costs=source.costs;
     
-    //If new costs were inputted in the edit screen, update appropriate static fields on
+    //If new details were inputted in the edit screen, update appropriate static fields on this screen
+    if(self.costs.totalCost!=nil){
+        
+        //Rearrange types to enable division of the NSDecimalNumber
+        NSString *attendeesString = [NSString stringWithFormat:@"%ld", (long)self.existingTripFromTab.tripInvites.numAttendees];
+        NSDecimalNumber *attendeesDecimal = [NSDecimalNumber decimalNumberWithString:attendeesString];
+        
+        NSDecimalNumber *temp=[self.costs.totalCost decimalNumberByDividingBy:attendeesDecimal];
+        NSString *temp2 = [NSString stringWithFormat:@"%@", temp];
+        self.costsLabel.text=temp2;
+    }
+    
+    if(self.costs.payee!=nil){
+        self.payeeLabel.text=self.costs.payee;
+    }
+    
+    if(self.costs.paymentDetails!=nil){
+        self.paymentNotesTextView.text=self.costs.paymentDetails;
+    }
+    
+    //Update value of details object in TripObject pointer
+    self.existingTripFromTab.tripCost=self.costs;
     
     
 }

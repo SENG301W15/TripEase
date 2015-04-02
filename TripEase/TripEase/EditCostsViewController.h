@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CostObject.h"
 
 @interface EditCostsViewController : UIViewController
 
+@property CostObject *costs;
+
+@property CostObject *existingCosts;
 
 @end
 

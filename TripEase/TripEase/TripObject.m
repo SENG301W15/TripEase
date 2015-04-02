@@ -7,6 +7,10 @@
 //
 
 #import "TripObject.h"
+#import "DetailsObject.h"
+#import "CostObject.h"
+#import "PackingObject.h"
+#import "InvitesObject.h"
 
 @implementation TripObject
 
@@ -16,6 +20,17 @@
         
         //Set default (unassigned) value of tripID to -1
         self.tripID=-1;
+        
+        //Instantiate component objects
+        self.tripDetails = [[DetailsObject alloc]init];
+        self.tripCost = [[CostObject alloc]init];
+        self.tripPacking = [[PackingObject alloc]init];
+        self.tripInvites = [[InvitesObject alloc]init];
+        
+        
+
+        
+        
     }
     return self;
 }

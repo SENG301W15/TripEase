@@ -1070,7 +1070,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Who Needs To Be Paid Back?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y4x-mf-NsZ">
-                                <rect key="frame" x="26" y="172" width="42" height="21"/>
+                                <rect key="frame" x="26" y="172" width="400" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1092,7 +1092,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e.g. You can pay Bob by email transfer!" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5PS-md-sH5">
-                                <rect key="frame" x="16" y="272" width="568" height="30"/>
+                                <rect key="frame" x="16" y="271" width="568" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -1131,6 +1131,12 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="costsNotesInput" destination="5PS-md-sH5" id="KaJ-WP-cVf"/>
+                        <outlet property="saveButton" destination="quc-5X-bHF" id="Ylg-5S-LAi"/>
+                        <outlet property="totalCostInput" destination="vgm-cD-t5S" id="cfX-Xy-6a4"/>
+                        <outlet property="whoToPay" destination="yyy-9e-S11" id="cdB-6W-l4c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="01D-Tw-sT7" sceneMemberID="firstResponder"/>
                 <exit id="3gp-b8-Eew" userLabel="Exit" sceneMemberID="exit"/>

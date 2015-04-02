@@ -9,6 +9,9 @@
 #import "TabBarViewController.h"
 #import "TripObject.h"
 #import "DetailsViewController.h"
+#import "CostsViewController.h"
+#import "PackingListTableViewController.h"
+#import "InvitesTableViewController.h"
 
 @interface TabBarViewController ()
 
@@ -49,8 +52,40 @@
     // Pass the selected object to the new view controller.
     
     //Point the existinTripFromTab TripObject in the destination view controller to the same location as the existingTrip TripObject
-    DetailsViewController *dvc = (DetailsViewController *)sender;
-    dvc.existingTripFromTab=self.existingTrip;
+    UIViewController *genericsender = (UIViewController *)sender;
+    
+
+    
+    //UIViewController *source =[segue sourceViewController];
+    //DetailsViewController *legitSource;
+    
+    /*
+    if([source isKindOfClass:[DetailsViewController class]]){
+        legitSource=(DetailsViewController *)source;
+    }//else if([source isKindOfClass:[CostsViewController class]]){
+    //  legitSource=(CostsViewController *)source;
+    //}*/
+    
+
+    
+    //Check which tab called prepareForSegue, cast dvc as that specific type of controller
+    //Then send existing trip object from this controller to the destination controller
+    if([genericsender isKindOfClass:[DetailsViewController class] ]){
+        //DetailsViewController *dvc = [[DetailsViewController alloc]init];
+        DetailsViewController *dvc = (DetailsViewController *)sender;
+        dvc.existingTripFromTab=self.existingTrip;
+    }else if ([genericsender isKindOfClass:[CostsViewController class]]){
+        CostsViewController *dvc = (CostsViewController *)sender;
+        dvc.existingTripFromTab=self.existingTrip;
+    }else if ([genericsender isKindOfClass:[PackingListTableViewController class]]){
+        PackingListTableViewController *dvc = (PackingListTableViewController *)sender;
+        dvc.existingTripFromTab=self.existingTrip;
+    }else if ([genericsender isKindOfClass:[InvitesTableViewController class]]){
+        InvitesTableViewController *dvc = (InvitesTableViewController *)sender;
+        dvc.existingTripFromTab=self.existingTrip;
+    }
+    
+   
 }
 
 

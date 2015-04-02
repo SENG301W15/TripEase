@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TripObject.h"
 
 @interface InvitesTableViewController : UITableViewController
 - (IBAction)unwindToInvites:(UIStoryboardSegue *)segue;
+
+
+@property (nonatomic) TripObject *existingTripFromTab;
+
 @end
