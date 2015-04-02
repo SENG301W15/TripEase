@@ -15,6 +15,9 @@
 
 @property NSMutableArray *packingListItems; //Array to store shared packing list items
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *homeButton;
+
+
 @end
 
 @implementation PackingListTableViewController
@@ -59,7 +62,7 @@
     
     self.packingListItems = [[NSMutableArray alloc] init]; //initialize packing list items array
     
-    //get a reference to the tabBarController that controls this tab bar item (the details tab) 
+    //get a reference to the tabBarController that controls this tab bar item (the details tab)
     TabBarViewController *temp = (TabBarViewController *)[self tabBarController];
     
     if (temp.existingTrip!=nil) {
@@ -192,6 +195,51 @@
     tappedItem.completed = !tappedItem.completed;   //Check if currently unchecked and vice versa
     [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
     
+}
+
+//Only permit user to return to home if a trip name has been entereed
+//Check whether a trip name exists
+//If it does, return YES
+//If it does not, return NO and pop up an error message
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender{
+    if(sender==self.homeButton){
+        //Only permit save if at least a trip name was entered
+        //- if trip name not entered, display alert and do not segue
+        
+        //Get a reference to the source view controller
+        TabBarViewController *tvc = (TabBarViewController *)[self tabBarController];
+        
+        //if there is no trip name,
+        if(tvc.existingTrip.tripDetails.tripName==nil){
+            //pop up error message, do not permit segue
+            [self showNoTitleAlert];
+            return NO;
+        }
+        
+        
+    }
+    //Otherwise, permit segue to Home
+    return YES;
+}
+
+//We want to enforce that the user MUST enter at least a trip name before saving.
+//This alert pops up if the user attempts to save without first entering a trip name
+- (void) showNoTitleAlert{
+    //Define the alert window
+    UIAlertView *noTitleAlert = [[UIAlertView alloc]
+                                 initWithTitle:@"Oops!"
+                                 message:@"You must enter a Trip Name before saving!\n\n Name your trip in the Details Tab."
+                                 delegate:nil
+                                 cancelButtonTitle:@"Ok"
+                                 otherButtonTitles:nil
+                                 ];
+    //display the alert
+    [noTitleAlert show];
+    
+    //[noTitleAlert release];
+}
+
+- (IBAction)homeButtonAction:(id)sender {
 }
 
 @end

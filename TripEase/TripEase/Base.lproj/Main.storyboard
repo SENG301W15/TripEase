@@ -967,6 +967,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="homeButton" destination="QPk-Je-JgH" id="e04-vI-BrW"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YbI-G5-2KK" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="IU6-hc-EGl" userLabel="Exit" sceneMemberID="exit"/>
