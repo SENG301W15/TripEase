@@ -29,33 +29,6 @@
 - (IBAction)unwindToHome:(UIStoryboardSegue *)segue {
     
     //Get the source view controller of the previous scene
-
-/*
- *   ATTENTION NEEDED HERE:
- *   Currently, the only unwind case implemented is the case where we unwind to home from the Details view.
- *   For all cases to work,
- *   We need to check which tab the 'home' button is pressed on
- *   Since each tab is a different type of ViewController, the type of view controller that we assign to
- *   source will depend on which tab we're unwinding from
- *
- *   so something like this: (idk about exact obj c syntax)
- *          
- *           ViewController *source = [segue sourceViewController];
- *           if(source.isType(DetailsViewController)){
- *               //cast as a DetailsViewContorller
- *               DetailsViewController *dsource = (DetailsViewController *)source;
- *           }else if(source.isType(CostsViewController)){
- *               //cast as a CostsViewController
- *               CostsViewController *csource = (CostsViewController *)source;
- *           } etc...
- *
- *   }
- *
- *
- *  (Currently, because this type detection and casting isn't implemented, we get an exception when you return
- *   home from any tab other than details)
- */
-    
     UIViewController *source =[segue sourceViewController];
     DetailsViewController *legitSource;
     
@@ -147,7 +120,7 @@
     //Instantiate New Trip button with title
     [self.nwTripButton setTitle:@"New Trip"];
     
-
+    
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -157,6 +130,12 @@
     
     //Allocate the array for storing the list of trips
     self.tripList = [[NSMutableArray alloc]init];
+    
+    //Load example trip
+    [self.tripList addObject:[self generateExampleTrip]];
+    
+
+    
     /*
     TripObject *trip =[[TripObject alloc]init];
     trip.tripDetails.tripName=@"Test Trip";
@@ -201,6 +180,58 @@
     
     //return the contents of the selected cell
     return cell;
+}
+
+
+//Generate a sample exiting trip object
+//(This simulates the user being invited to a trip by someone else)
+-(TripObject *)generateExampleTrip{
+    TripObject *exampleTrip = [[TripObject alloc]init];
+    
+    //Fill in Details
+    exampleTrip.tripDetails.tripName=@"Camping Weekend";
+    exampleTrip.tripDetails.tripLocation=@"Kananaskis";
+    exampleTrip.tripDetails.startDate=@"Friday April 17 2015";
+    exampleTrip.tripDetails.endDate=@"Sunday April 19 2015";
+    exampleTrip.tripDetails.extraDetails=@"Let's go camping to celebrate that the SENG301 nightmare is over!";
+    
+    //Fill in Costs
+    NSString *costString = @"50.00";
+    exampleTrip.tripCost.totalCost=[NSDecimalNumber decimalNumberWithString: costString];
+    exampleTrip.tripCost.payee=@"Alaa Azazi";
+    exampleTrip.tripCost.paymentDetails=@"Alaa will buy firewood. Bring small unmarked bills to pay him back.";
+    
+    //Fill in PackingList
+    PackingListItem *pkitem1 = [[PackingListItem alloc]init];
+    PackingListItem *pkitem2 = [[PackingListItem alloc]init];
+    pkitem1.itemName=@"Coleman Stove";
+    pkitem1.completed=YES;
+    [exampleTrip.tripPacking.packingList addObject:pkitem1];
+    pkitem2.itemName=@"Beer";
+    pkitem2.completed=NO;
+    [exampleTrip.tripPacking.packingList addObject:pkitem2];
+   
+    //Fill Invitees
+    InviteListItem *person1 = [[InviteListItem alloc]init];
+    InviteListItem *person2 = [[InviteListItem alloc]init];
+    InviteListItem *person3 = [[InviteListItem alloc]init];
+    person1.inviteeName=@"Katie";
+    person1.inviteePhone=@"4031111111";
+    [exampleTrip.tripInvites.inviteeList addObject:person1];
+    
+    person2.inviteeName=@"Dave";
+    person2.inviteePhone=@"4032222222";
+    person2.replied=YES;
+    person2.attending=NO;
+    [exampleTrip.tripInvites.inviteeList addObject:person2];
+    
+    person3.inviteeName=@"Tedd";
+    person3.inviteePhone=@"4033333333";
+    person3.replied=YES;
+    person3.attending=YES;
+    [exampleTrip.tripInvites.inviteeList addObject:person3];
+    
+    return exampleTrip;
 }
 
 

@@ -37,6 +37,9 @@
     self.paymentNotesTextView.layer.borderColor=[[[UIColor grayColor] colorWithAlphaComponent:0.2]CGColor];
     
     
+
+    
+    
     //THE FOLLOWING LINES *WORK*, DO NOT DELETE!!!!
     
     //get a reference to the tabBarController that controls this tab bar item (the details tab)
