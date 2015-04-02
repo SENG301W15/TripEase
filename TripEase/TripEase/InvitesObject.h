@@ -7,9 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "InviteListItem.h"
 
 @interface InvitesObject : NSObject
 
 @property NSInteger numAttendees;
+
+@property InviteListItem *listItem;
+
+@property NSMutableArray *inviteeList;
 
 @end

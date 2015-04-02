@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "InviteListItem.h"
 
 @interface SendInviteViewController : UIViewController
+
+@property InviteListItem *inviteListItem;
 
 @end

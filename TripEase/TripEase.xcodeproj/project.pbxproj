@@ -32,6 +32,7 @@
 		635DC30A1A93C16400CCEEEA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 635DC3091A93C16400CCEEEA /* Images.xcassets */; };
 		635DC30D1A93C16400CCEEEA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 635DC30B1A93C16400CCEEEA /* LaunchScreen.xib */; };
 		635DC3191A93C16400CCEEEA /* TripEaseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 635DC3181A93C16400CCEEEA /* TripEaseTests.m */; };
+		63E5E0611ACDB77D005262F8 /* InviteListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E5E0601ACDB77D005262F8 /* InviteListItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,8 @@
 		635DC3121A93C16400CCEEEA /* TripEaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TripEaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		635DC3171A93C16400CCEEEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		635DC3181A93C16400CCEEEA /* TripEaseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TripEaseTests.m; sourceTree = "<group>"; };
+		63E5E05F1ACDB77D005262F8 /* InviteListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InviteListItem.h; sourceTree = "<group>"; };
+		63E5E0601ACDB77D005262F8 /* InviteListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InviteListItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +147,8 @@
 				63311C3D1AC61D2600CE90D8 /* HomeTableViewController.m */,
 				63311C391AC6155100CE90D8 /* InvitesTableViewController.h */,
 				63311C3A1AC6155100CE90D8 /* InvitesTableViewController.m */,
+				63E5E05F1ACDB77D005262F8 /* InviteListItem.h */,
+				63E5E0601ACDB77D005262F8 /* InviteListItem.m */,
 				63311C361AC6148E00CE90D8 /* SendInviteViewController.h */,
 				63311C371AC6148E00CE90D8 /* SendInviteViewController.m */,
 				63311C251AC606C100CE90D8 /* DetailsViewController.m */,
@@ -307,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				63311C3B1AC6155100CE90D8 /* InvitesTableViewController.m in Sources */,
+				63E5E0611ACDB77D005262F8 /* InviteListItem.m in Sources */,
 				635DC3051A93C16400CCEEEA /* EditCostsViewController.m in Sources */,
 				63311C381AC6148E00CE90D8 /* SendInviteViewController.m in Sources */,
 				63311C3E1AC61D2600CE90D8 /* HomeTableViewController.m in Sources */,
