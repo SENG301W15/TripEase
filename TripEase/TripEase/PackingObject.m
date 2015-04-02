@@ -10,4 +10,14 @@
 
 @implementation PackingObject
 
+//Constructor for PackingObject
+-(id)init {
+    if(self=[super init]){
+        
+        //Allocate memory for the mutable array that will hold the packing list
+        self.packingList = [[NSMutableArray alloc] init]; 
+    }
+    return self;
+}
+
 @end

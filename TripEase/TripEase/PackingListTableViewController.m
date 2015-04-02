@@ -9,6 +9,7 @@
 #import "PackingListTableViewController.h"
 #import "PackingListItem.h"
 #import "AddPackingListItemViewController.h"
+#import "TabBarViewController.h" //M
 
 @interface PackingListTableViewController ()
 
@@ -39,11 +40,18 @@
     //Recover the item that was added by the user, if any
     PackingListItem *item = source.packingListItem;
     
-    //If item exists (i.e. if user entered any text), add item to the table and reload the view to display this
+    //If item exists (i.e. if user entered any text), add item to the table and reload the view to display this. Also add item to the existingTripObject
     if (item != nil) {
-        [self.packingListItems addObject:item];
+        //Don't need to explicitly save to local packing list because we pointed local array to
+        //the same location as the existingTrip array
+        [self.existingTripFromTab.tripPacking.packingList addObject:item];
         [self.tableView reloadData];
     }
+    
+    //DID THIS ABOVE CAN PROB DELETE THESE LINES
+    //Update value of PackingList object in TripObject pointer
+    //self.existingTripFromTab.tripPacking.packingList=self.packingListItems;
+    
 }
 
 - (void)viewDidLoad {
@@ -51,6 +59,20 @@
     
     self.packingListItems = [[NSMutableArray alloc] init]; //initialize packing list items array
     
+    //get a reference to the tabBarController that controls this tab bar item (the details tab) 
+    TabBarViewController *temp = (TabBarViewController *)[self tabBarController];
+    
+    if (temp.existingTrip!=nil) {
+        self.existingTripFromTab = temp.existingTrip;
+    
+        //If viewing an existing trip, populate the array with the existing packing list items
+        if(self.existingTripFromTab.tripPacking!=nil){
+            self.packingListItems=self.existingTripFromTab.tripPacking.packingList;
+            
+            //reload view to display items
+            [self.tableView reloadData];
+        }
+    }
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -162,7 +184,7 @@
 
 #pragma mark - Table view delegate
 
-//ADD COMMENTS: What the fuck is actually happening here
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     [tableView deselectRowAtIndexPath:indexPath animated:NO];

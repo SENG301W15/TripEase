@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PackingListItem.h"
 
 @interface PackingObject : NSObject
+
+@property PackingListItem *listItem;
+
+@property NSMutableArray *packingList;
 
 @end
