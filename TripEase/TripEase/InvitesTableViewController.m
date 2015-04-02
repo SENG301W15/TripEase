@@ -99,13 +99,29 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ListPrototypeCell" forIndexPath:indexPath];
+    /*
+    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"ListPrototypeCell"];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    */
+    
     
     //Display the invitees name in the list
     InviteListItem *InviteListItem = [self.inviteeList objectAtIndex:indexPath.row];
     cell.textLabel.text = InviteListItem.inviteeName;
     
-    
+    //Display question mark if not replied
+    if (!InviteListItem.replied) {
+        //cell.accessoryType = UITableViewCellAccessoryNone;
+        cell.detailTextLabel.text = @"Not Yet Replied";
+    } else if (InviteListItem.attending) {
+        //cell.accessoryType = UITableViewCellAccessoryCheckmark;
+        cell.detailTextLabel.text = @"Attending";
+    } else {
+        //cell.accessoryType = UITableViewCellAccessoryNone;
+        cell.detailTextLabel.text = @"Declined";
+    }
     
     return cell;
 }
