@@ -39,6 +39,8 @@
  // Pass the selected object to the new view controller.
  
  
+     
+     
  //Check whether entered item should be saved
  
  //If save button not tapped, do nothing an return
@@ -47,13 +49,16 @@
  //If reached this line - save button was tapped
  //If any text was entered do the following:
  if (self.inviteeName.text.length > 0) {
- self.InviteListItem = [[InviteListItem alloc] init];  //instantiate new invitelistitem item
+ self.inviteListItem = [[InviteListItem alloc] init];  //instantiate new invitelistitem item
  self.inviteListItem.inviteeName = self.inviteeName.text;    //name of new invitee = text user entered
  self.inviteListItem.inviteePhone = self.inviteePhone.text;                           //Initially item is not completed
      self.inviteListItem.replied = NO; //Initialize replied field
      self.inviteListItem.attending = NO; //Initialize attending field
  }
  
+ 
+  
+  
  }
 
 @end

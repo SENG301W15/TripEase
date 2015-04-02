@@ -16,6 +16,11 @@
         
         //Set default (unassigned) value of numAttendees to 1
         self.numAttendees=1;
+        
+        //Allocate memory for the mutable array that will hold the invitee list
+        self.inviteeList = [[NSMutableArray alloc] init];
+
+        
     }
     return self;
 }

@@ -464,7 +464,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="New Invite" id="QDc-xP-JFd">
                             <connections>
-                                <segue destination="ufA-A9-ZLm" kind="presentation" id="j0j-6i-VHO"/>
+                                <segue destination="ufA-A9-ZLm" kind="presentation" id="NOT-IM-UN3"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -543,7 +543,6 @@
                     <connections>
                         <outlet property="inviteeName" destination="dsY-oO-O3O" id="aUm-do-sKN"/>
                         <outlet property="inviteePhone" destination="dLF-iQ-rp7" id="09X-2i-m58"/>
-                        <outlet property="sendInvite" destination="Av5-W2-2fT" id="8Iy-le-FFu"/>
                         <outlet property="sendInviteButton" destination="Av5-W2-2fT" id="qh2-Zc-fEp"/>
                     </connections>
                 </viewController>
@@ -751,7 +750,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nqu-FT-En2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1717" y="358"/>
+            <point key="canvasLocation" x="1717" y="366"/>
         </scene>
         <!--Details-->
         <scene sceneID="it2-PR-qzW">

@@ -22,8 +22,11 @@
 
 @implementation InvitesTableViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    
     
     self.inviteeList = [[NSMutableArray alloc] init]; //initialize invitee list  array
     
@@ -41,6 +44,8 @@
             [self.tableView reloadData];
         }
     }
+
+     
 }
 
 - (void)didReceiveMemoryWarning {
@@ -80,29 +85,14 @@
 }
 
 #pragma mark - Navigation
-/*
+
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    
-    
-    //Check whether entered item should be saved
-    
- 
-     //If save button not tapped, do nothing an return
-     if (sender != self.saveButton) return;
-     
-     //If reached this line - save button was tapped
-     //If any text was entered do the following:
-     if (self.textField.text.length > 0) {
-     self.PackingListItem = [[PackingListItem alloc] init];  //add new PackingListItem to array
-     self.packingListItem.itemName = self.textField.text;    //name of new item = text user entered
-     self.packingListItem.completed = NO;                           //Initially item is not completed
-     }
- 
-    
-}*/
+   
+
+}
 
 
 
