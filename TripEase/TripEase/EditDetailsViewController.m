@@ -28,7 +28,9 @@
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *saveButton;
 
+@property NSDate *startDate;
 
+@property NSDate *endDate;
 
 
 //@property DetailsObject *details;
@@ -81,6 +83,7 @@
     
     [startDatePicker addTarget:self action:@selector(updateStartDateTextField:) forControlEvents:UIControlEventValueChanged];
     [endDatePicker addTarget:self action:@selector(updateEndDateTextField:) forControlEvents:UIControlEventValueChanged];
+
     
     //call updateDateTextField method when either date text field is selected by user
     [self.startDateTextField setInputView:startDatePicker];
@@ -93,6 +96,8 @@
 -(void)updateStartDateTextField:(id)sender{ //(id)sender
     UIDatePicker *picker=(UIDatePicker *)self.startDateTextField.inputView;
     
+    self.startDate=picker.date;
+
     //Format time and date string to 'Day, Month date year'
     //Instantiate new NSDateFormatter object
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
@@ -109,6 +114,7 @@
 -(void)updateEndDateTextField:(id)sender{ //(id)sender
     UIDatePicker *picker=(UIDatePicker *)self.endDateTextField.inputView;
     
+    self.endDate=picker.date;
     //Format time and date string to 'Day, Month date year'
     //Instantiate new NSDateFormatter object
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
@@ -186,6 +192,8 @@
     
 }
 
+
+
 //Check whether user entered a trip name - only permit segue if they did
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender{
     if(sender==self.saveButton){
@@ -196,9 +204,31 @@
             [self showNoTitleAlert];
             return NO;
         }
+        if ([self.startDate compare:self.endDate] == NSOrderedDescending) {
+            NSLog(@"startDate is later than endDate");
+            [self showInvalidDateAlert];
+            return NO;
+        }
         
     }
     return YES;
+}
+
+//We want to enforce that te user must enter an end date later than the start date
+//This alert pops up if the user attempts to save with a start date later than the end date
+- (void) showInvalidDateAlert{
+    //Define the alert window
+    UIAlertView *InvalidDateAlert = [[UIAlertView alloc]
+                                 initWithTitle:@"Oops!"
+                                 message:@"You must enter an End date later than the Start date"
+                                 delegate:nil
+                                 cancelButtonTitle:@"Ok"
+                                 otherButtonTitles:nil
+                                 ];
+    //display the alert
+    [InvalidDateAlert show];
+    
+    //[noTitleAlert release];
 }
 
 //We want to enforce that the user MUST enter at least a trip name before saving.
