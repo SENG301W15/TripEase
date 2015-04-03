@@ -1,5 +1,5 @@
 //
-//  FirstViewController.h
+//  EditDetailsViewController.h
 //  TripEase
 //
 //  Created by David Patterson on 2015-02-17.
@@ -11,8 +11,6 @@
 
 @interface EditDetailsViewController : UIViewController
 
-//@property (strong, nonatomic) IBOutlet UILabel *predictionLabel;
-//- (IBAction)buttonPressed;
 
 @property DetailsObject *details;
 

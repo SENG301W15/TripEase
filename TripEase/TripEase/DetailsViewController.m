@@ -16,18 +16,9 @@
 
 
 @interface DetailsViewController ()
-/*
-@property (weak, nonatomic) IBOutlet UILabel *tripNameText;
 
-@property (weak, nonatomic) IBOutlet UILabel *tripLocationText;
-@property (weak, nonatomic) IBOutlet UILabel *startDateText;
-@property (weak, nonatomic) IBOutlet UILabel *endDateText;
-
-@property (weak, nonatomic) IBOutlet UITextView *extraDetailsText;
-
-*/
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *editButton;
-//@property (strong, nonatomic) IBOutlet UINavigationItem *detailsToolbar;
+
  
 @end
 
@@ -47,15 +38,6 @@
     self.extraDetailsText.layer.cornerRadius=7;
     self.extraDetailsText.layer.borderColor=[[[UIColor grayColor] colorWithAlphaComponent:0.2]CGColor];
     
-    //If the details object in the existing TripObject passed in by the HomeTableController is not nil,
-    //populate fields on this screen with the existing details fields
-    //if(existingTripFromTab.tripDetails.tripName!=nil){
-    //    self.tripNameText.text=existingTripFromTab.tripDetails.tripName;
-    // }
-    
-    /////////////////////////////////////////////////////////////////////////////////////////////
-    //PASSING DATA FROM TAB BAR VIEW CONTROLLER TO DETAILS VIEW CONTROLLER:
-    //THE FOLLOWING LINES *WORK*, DO NOT DELETE!!!!
     
     //get a reference to the tabBarController that controls this tab bar item (the details tab)
     TabBarViewController *temp = (TabBarViewController *)[self tabBarController];
@@ -112,7 +94,6 @@
     EditDetailsViewController *source = [segue sourceViewController];
     
     //Retrieve the DetailsObject from the EditDetailsViewController
-    //DetailsObject *deets = [[DetailsObject alloc]init];
     self.deets=source.details;
     
     //If new details were inputted in the edit screen, update appropriate static fields on this screen

@@ -9,10 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "TripObject.h"
 
-@interface TabBarViewController : UITabBarController /*{
-    TripObject *_existingTrip;
-}*/
-
+@interface TabBarViewController : UITabBarController 
 
 
 

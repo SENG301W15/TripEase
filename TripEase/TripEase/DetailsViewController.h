@@ -12,9 +12,7 @@
 #import "TripObject.h"
 
 
-@interface DetailsViewController : UIViewController; /*{
-    TripObject *existingTripFromTab;
-}*/
+@interface DetailsViewController : UIViewController; 
 
 @property DetailsObject *deets;
 

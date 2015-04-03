@@ -152,14 +152,7 @@
     
     //If reached this line - save button was tapped
     
-    /*
-    //Only permit save if at least a trip name was entered
-    //- if trip name not entered, display alert and do not segue
-    if(self.tripNameTextField.text.length==0){
-        [self showNoTitleAlert];
-    }
-    */
-    
+        
     //Instantiate new DetailsObject to hold the data
     self.details = [[DetailsObject alloc]init];
     
@@ -194,10 +187,10 @@
 
 
 
-//Check whether user entered a trip name - only permit segue if they did
+//Check whether user entered a trip name and that end date>start date - only permit segue if both true
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender{
     if(sender==self.saveButton){
-    //if([identifier isEqualToString:@"unwindToDetails"]){
+    
         //Only permit save if at least a trip name was entered
         //- if trip name not entered, display alert and do not segue
         if(self.tripNameTextField.text.length==0){

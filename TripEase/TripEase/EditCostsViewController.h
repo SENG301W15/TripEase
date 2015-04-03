@@ -1,5 +1,5 @@
 //
-//  SecondViewController.h
+//  EditCostsViewController.h
 //  TripEase
 //
 //  Created by David Patterson on 2015-02-17.

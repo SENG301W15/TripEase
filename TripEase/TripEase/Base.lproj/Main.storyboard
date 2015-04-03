@@ -53,13 +53,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RoA-IA-922">
-                                <rect key="frame" x="244" y="521" width="113" height="30"/>
-                                <state key="normal" title="Update RSVP!">
-                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="When:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PGt-af-OpS">
                                 <rect key="frame" x="16" y="288" width="79" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -90,7 +83,6 @@
                             <constraint firstItem="s5i-Fy-Dnj" firstAttribute="leading" secondItem="PEz-kA-Tol" secondAttribute="leadingMargin" id="DzK-f8-IP5"/>
                             <constraint firstItem="xtS-Q3-vcl" firstAttribute="leading" secondItem="PEz-kA-Tol" secondAttribute="leadingMargin" id="GXj-fp-Lud"/>
                             <constraint firstItem="fKO-Cn-8ls" firstAttribute="trailing" secondItem="PEz-kA-Tol" secondAttribute="trailingMargin" id="IAR-fO-B42"/>
-                            <constraint firstItem="RoA-IA-922" firstAttribute="top" secondItem="xtS-Q3-vcl" secondAttribute="bottom" constant="8" id="Jhn-3K-7po"/>
                             <constraint firstItem="seq-5K-wCw" firstAttribute="top" secondItem="NvP-IJ-ngZ" secondAttribute="bottom" constant="33" id="Ltu-h8-jgg"/>
                             <constraint firstItem="fKO-Cn-8ls" firstAttribute="trailing" secondItem="PEz-kA-Tol" secondAttribute="trailingMargin" id="Q6l-IX-cwu"/>
                             <constraint firstItem="x7b-cb-NCy" firstAttribute="top" secondItem="uaf-6E-jd1" secondAttribute="bottom" constant="33" id="Qa0-0W-8Ek"/>
@@ -100,10 +92,8 @@
                             <constraint firstItem="PGt-af-OpS" firstAttribute="leading" secondItem="PEz-kA-Tol" secondAttribute="leadingMargin" id="b6G-qm-83Q"/>
                             <constraint firstItem="xtS-Q3-vcl" firstAttribute="trailing" secondItem="PEz-kA-Tol" secondAttribute="trailingMargin" id="eSy-83-6Uv"/>
                             <constraint firstItem="s5i-Fy-Dnj" firstAttribute="trailing" secondItem="PEz-kA-Tol" secondAttribute="trailingMargin" id="fG9-PC-cRC"/>
-                            <constraint firstItem="HLR-Oa-2K0" firstAttribute="top" secondItem="RoA-IA-922" secondAttribute="bottom" constant="8" id="ofb-CI-9ed"/>
                             <constraint firstItem="uaf-6E-jd1" firstAttribute="leading" secondItem="PEz-kA-Tol" secondAttribute="leadingMargin" id="pf5-DM-cxp"/>
                             <constraint firstItem="NvP-IJ-ngZ" firstAttribute="top" secondItem="s5i-Fy-Dnj" secondAttribute="bottom" constant="33" id="qGR-SF-VsA"/>
-                            <constraint firstAttribute="centerX" secondItem="RoA-IA-922" secondAttribute="centerX" id="rSl-dq-pkq"/>
                             <constraint firstItem="seq-5K-wCw" firstAttribute="top" secondItem="NvP-IJ-ngZ" secondAttribute="bottom" constant="33" id="sS7-Lo-O8c"/>
                             <constraint firstItem="PGt-af-OpS" firstAttribute="top" secondItem="x7b-cb-NCy" secondAttribute="bottom" constant="33" id="t4k-NF-Mod"/>
                             <constraint firstItem="x7b-cb-NCy" firstAttribute="leading" secondItem="PEz-kA-Tol" secondAttribute="leadingMargin" id="yre-vl-X5y"/>
@@ -510,7 +500,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e.g. (123)867-5309" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dLF-iQ-rp7">
                                 <rect key="frame" x="16" y="349" width="568" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Friend's Phone Number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EHq-Pa-3kj">
                                 <rect key="frame" x="16" y="328" width="568" height="21"/>

@@ -18,8 +18,6 @@
 
 @property NSMutableArray *tripList;
 
-//@property TripObject *trip;
-
 @property (weak, nonatomic) IBOutlet UINavigationItem *nwTripButton;
 
 @end
@@ -35,15 +33,9 @@
     
     if([source isKindOfClass:[DetailsViewController class]]){
         legitSource=(DetailsViewController *)source;
-    }//else if([source isKindOfClass:[CostsViewController class]]){
-      //  legitSource=(CostsViewController *)source;
-    //}
-    
-    //DetailsViewController *source = [segue sourceViewController];
+    }
     
     //Recover the item that was added by the user, if any
-    //DetailsObject *details = legitSource.deets;
-    
     TripObject *trip = [[TripObject alloc]init];
     
     
@@ -152,14 +144,7 @@
     }
 
     
-    /*
-    TripObject *trip =[[TripObject alloc]init];
-    trip.tripDetails.tripName=@"Test Trip";
-  
-    [self.tripList addObject:trip];
-    [self.tableView reloadData];
-*/
-    
+       
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{

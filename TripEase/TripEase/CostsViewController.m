@@ -24,8 +24,6 @@
 
 @implementation CostsViewController
 
-//Get value of existing trip passed in from Tab View Controller
-//@synthesize existingTripFromTab;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -37,7 +35,7 @@
     self.paymentNotesTextView.layer.borderColor=[[[UIColor grayColor] colorWithAlphaComponent:0.2]CGColor];
     
     
-    //THE FOLLOWING LINES *WORK*, DO NOT DELETE!!!!
+    
     
     //get a reference to the tabBarController that controls this tab bar item (the details tab)
     TabBarViewController *temp = (TabBarViewController *)[self tabBarController];

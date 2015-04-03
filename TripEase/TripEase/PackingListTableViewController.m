@@ -51,9 +51,7 @@
         [self.tableView reloadData];
     }
     
-    //DID THIS ABOVE CAN PROB DELETE THESE LINES
-    //Update value of PackingList object in TripObject pointer
-    //self.existingTripFromTab.tripPacking.packingList=self.packingListItems;
+    
     
 }
 

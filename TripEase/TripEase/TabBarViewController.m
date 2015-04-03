@@ -20,13 +20,7 @@
 @end
 
 @implementation TabBarViewController
-/*
-@synthesize existingTrip = _existingTrip;
 
-- (TripObject *)existingTrip {
-    return _existingTrip;
-}
-*/
 
 
 //You need to pass a UIStoryboardSegue into viewDidLoad so that you can
@@ -55,19 +49,7 @@
     
     //Point the existinTripFromTab TripObject in the destination view controller to the same location as the existingTrip TripObject
     UIViewController *genericsender = (UIViewController *)sender;
-    
 
-    
-    //UIViewController *source =[segue sourceViewController];
-    //DetailsViewController *legitSource;
-    
-    /*
-    if([source isKindOfClass:[DetailsViewController class]]){
-        legitSource=(DetailsViewController *)source;
-    }//else if([source isKindOfClass:[CostsViewController class]]){
-    //  legitSource=(CostsViewController *)source;
-    //}*/
-    
 
     
     //Check which tab called prepareForSegue, cast dvc as that specific type of controller
