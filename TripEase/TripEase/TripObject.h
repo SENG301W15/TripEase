@@ -15,6 +15,9 @@
 @interface TripObject : NSObject
 
 @property NSInteger tripID; //A new unique ID will be created for each trip upon instantiation
+
+@property BOOL isOrganizer; //Boolean to distinguish organizers from attendees
+
 @property DetailsObject *tripDetails;
 @property CostObject *tripCost;
 @property PackingObject *tripPacking;

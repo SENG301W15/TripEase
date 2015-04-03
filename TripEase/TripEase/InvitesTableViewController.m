@@ -45,6 +45,13 @@
         }
     }
 
+    
+    //Only display the Edit button if the user is an organier
+    if(!self.existingTripFromTab.isOrganizer){
+        
+        [self.navigationItem setRightBarButtonItem:nil];
+    }
+    
      
 }
 

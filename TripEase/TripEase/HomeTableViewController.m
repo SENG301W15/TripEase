@@ -56,6 +56,8 @@
         //Recover the info added/modified by the user
         trip=self.activeTrip;
         
+        
+        
         //Check whether a tripID has already been set for the active trip - create one if not
         //(tripID==-1 indiactes that we are saving this trip for the first time and so we need to create a trip id)
         if(self.activeTrip.tripID==-1){
@@ -192,6 +194,9 @@
     
     //Assign TripID=0;
     exampleTrip.tripID=0;
+    
+    //Identify user as an Attendee, not an organizer
+    exampleTrip.isOrganizer=NO;
     
     //Fill in Details
     exampleTrip.tripDetails.tripName=@"Camping Weekend";

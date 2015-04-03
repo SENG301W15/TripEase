@@ -26,6 +26,8 @@
 @property (weak, nonatomic) IBOutlet UITextView *extraDetailsText;
 
 */
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *editButton;
+//@property (strong, nonatomic) IBOutlet UINavigationItem *detailsToolbar;
  
 @end
 
@@ -37,6 +39,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+
     
     //Apply border around the "Additional Details" text field
     self.extraDetailsText.layer.borderWidth=1.0;
@@ -87,7 +91,11 @@
         
     }
     
-   
+    //Only display the Edit button if the user is an organier
+    if(!self.existingTripFromTab.isOrganizer){
+        
+        [self.navigationItem setRightBarButtonItem:nil];
+    }
     
     
     }

@@ -123,6 +123,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="editButton" destination="1oi-ge-eEH" id="sBZ-yc-ylP"/>
                         <outlet property="endDateText" destination="fKO-Cn-8ls" id="YSh-Xw-Wcm"/>
                         <outlet property="extraDetailsText" destination="xtS-Q3-vcl" id="VZj-Xy-zpa"/>
                         <outlet property="startDateText" destination="rWY-AO-ftS" id="sC3-Vp-bTz"/>

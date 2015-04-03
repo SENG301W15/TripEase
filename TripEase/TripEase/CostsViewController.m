@@ -62,33 +62,13 @@
             self.paymentNotesTextView.text = temp.existingTrip.tripCost.paymentDetails;
         }
         
-        /*
-        //Trip Name
-        if (temp.existingTrip.tripDetails.tripName != nil) {
-            self.tripNameText.text = temp.existingTrip.tripDetails.tripName;
-        }
+               
         
-        //Trip Location
-        if (temp.existingTrip.tripDetails.tripLocation !=nil){
-            self.tripLocationText.text = temp.existingTrip.tripDetails.tripLocation;
+        //Only display the Edit button if the user is an organier
+        if(!self.existingTripFromTab.isOrganizer){
+            
+            [self.navigationItem setRightBarButtonItem:nil];
         }
-        
-        //Start Date
-        if(temp.existingTrip.tripDetails.startDate !=nil){
-            self.startDateText.text = temp.existingTrip.tripDetails.startDate;
-        }
-        
-        //End Date
-        if(temp.existingTrip.tripDetails.endDate !=nil){
-            self.endDateText.text = temp.existingTrip.tripDetails.endDate;
-        }
-        
-        //Additional Details
-        if(temp.existingTrip.tripDetails.extraDetails !=nil){
-            self.extraDetailsText.text = temp.existingTrip.tripDetails.extraDetails;
-        }
-         
-         */
         
     }
     

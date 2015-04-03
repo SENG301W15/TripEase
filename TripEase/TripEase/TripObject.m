@@ -21,6 +21,9 @@
         //Set default (unassigned) value of tripID to -1
         self.tripID=-1;
         
+        //Since constructor is called when a new trip is created, the current user is the trip organizer
+        self.isOrganizer=YES;
+        
         //Instantiate component objects
         self.tripDetails = [[DetailsObject alloc]init];
         self.tripCost = [[CostObject alloc]init];
