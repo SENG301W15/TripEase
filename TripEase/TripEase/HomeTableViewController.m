@@ -131,9 +131,11 @@
     //Allocate the array for storing the list of trips
     self.tripList = [[NSMutableArray alloc]init];
     
-    //Load example trip
-    [self.tripList addObject:[self generateExampleTrip]];
-    
+    //On initial entry into app, Load example trip
+    //(simulates receiving an invitation from another app user)
+    if([self.tripList count]==0){
+        [self.tripList addObject:[self generateExampleTrip]];
+    }
 
     
     /*
@@ -187,6 +189,9 @@
 //(This simulates the user being invited to a trip by someone else)
 -(TripObject *)generateExampleTrip{
     TripObject *exampleTrip = [[TripObject alloc]init];
+    
+    //Assign TripID=0;
+    exampleTrip.tripID=0;
     
     //Fill in Details
     exampleTrip.tripDetails.tripName=@"Camping Weekend";
