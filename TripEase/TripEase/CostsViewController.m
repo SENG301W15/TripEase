@@ -15,6 +15,7 @@
 
 @interface CostsViewController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *userIdLabel;
 
 @property CostObject *costs;
 
@@ -63,9 +64,11 @@
                
         
         //Only display the Edit button if the user is an organier
+        //Only display the "You Are the Trip Organizer" label if the user is the trip organizer
         if(!self.existingTripFromTab.isOrganizer){
             
             [self.navigationItem setRightBarButtonItem:nil];
+             self.userIdLabel.text=@"";
         }
         
     }

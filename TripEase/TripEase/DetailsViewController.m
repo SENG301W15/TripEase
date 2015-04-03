@@ -18,6 +18,7 @@
 @interface DetailsViewController ()
 
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *editButton;
+@property (weak, nonatomic) IBOutlet UILabel *userIdLabel;
 
  
 @end
@@ -74,9 +75,11 @@
     }
     
     //Only display the Edit button if the user is an organier
+    //Only display "You are the Trip Organizer" if user is an organizer
     if(!self.existingTripFromTab.isOrganizer){
         
         [self.navigationItem setRightBarButtonItem:nil];
+        self.userIdLabel.text=@"";
     }
     
     
