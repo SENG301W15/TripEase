@@ -12,3 +12,4 @@ Our commit log can be accessed here:
 
     https://github.com/SENG301W15/TripEase/commits/master
 
+Unfortunately we were unable to use a code coverage tool to measure the amount of code covered by our unit tests (apparently calculating line coverage in XCode is non-trivial).  However, our test cases can be found in our project folder under tests and are viewable/runnable in XCode.  To run all tests, press Command + U.
