@@ -80,6 +80,18 @@
    
 }
 
+//Adds "swipe row to delete" functionality
+//When user swipes to the left on this row, the 'delete' button appears at the left of the row
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    //Remove deleted item from the array
+    [self.tripList removeObjectAtIndex:indexPath.row];
+    
+    //Reload table view to display updated state
+    [tableView reloadData];
+    
+}
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
